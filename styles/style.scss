@@ -1,3 +1,4 @@
+//VARIABLES
 $backgroundColor: #FFFEEB;
 $textPrimaryColor: #000000;
 
@@ -7,6 +8,28 @@ $mainFont: 'Space Mono',monospace;
 $tablet: 800px;
 
 $paddingInline: 4rem;
+
+//UTILITY
+.h-1 {
+    font-family: $headersFont;
+    font-size: calc(70rem/16);
+    text-transform: uppercase;
+}
+
+.h-2 {
+    font-family: $headersFont;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.text {
+    font-family: $mainFont;
+    font-size: calc(20rem/16);
+}
+
+.text {
+
+}
 
 * {
     margin: 0;
@@ -90,6 +113,11 @@ $paddingInline: 4rem;
     .menu-container {
         gap: calc(60rem/16);
     }
+}
+
+.landing {
+    display: flex;
+    justify-content: space-between;
 }
 
 @media (max-width: $tablet) {

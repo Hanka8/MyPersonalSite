@@ -1,3 +1,20 @@
+.h-1 {
+  font-family: "Archivo Black", sans-serif;
+  font-size: 4.375rem;
+  text-transform: uppercase;
+}
+
+.h-2 {
+  font-family: "Archivo Black", sans-serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.text {
+  font-family: "Space Mono", monospace;
+  font-size: 1.25rem;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -78,6 +95,11 @@
 }
 .navbar .menu-container {
   gap: 3.75rem;
+}
+
+.landing {
+  display: flex;
+  justify-content: space-between;
 }
 
 @media (max-width: 800px) {
