@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 4rem;
+  border-bottom: 2px solid black;
+}
+.navbar .navbar__menubtn {
+  display: none;
+}
+.navbar .navbar__container {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.navbar .navbar__container .navbar-logo img {
+  width: 40px;
+}
+.navbar .navbar__container .menu__item {
+  font-family: "Space Mono", monospace;
+  font-size: 1.25rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000000;
+  position: relative;
+  padding: 5px;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+.navbar .navbar__container .menu__item::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #000000;
+  left: 0;
+  bottom: 0;
+  transition: width 0.3s ease-in-out;
+}
+.navbar .navbar__container .menu__item:hover::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #000000;
+  left: 0;
+  bottom: 0;
+  transition: width 0.3s ease-in-out;
+}
+.navbar .navbar__container .menu__item.active {
+  border: 2px solid #000000;
+}
+.navbar .navbar__container .menu__item.active::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #000000;
+  left: 0;
+  bottom: 0;
+  transition: width 0.3s ease-in-out;
+}
+.navbar .navbar__container .menu__item.active::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background-color: #000000;
+  left: 0;
+  bottom: 0;
+  transition: width 0.3s ease-in-out;
+}
+.navbar .menu-container {
+  gap: 3.75rem;
+}
+
+@media (max-width: 800px) {
+  .navbar {
+    position: relative;
+  }
+  .navbar .menu-container {
+    height: 0;
+    flex-direction: column;
+    gap: 0;
+    padding-left: 30px;
+    padding-right: 30px;
+    position: absolute;
+    top: 100%;
+    right: calc(0% + 2.6666666667rem);
+    transition: height 200ms ease, padding 200ms ease, gap 200ms ease;
+  }
+  .navbar .menu-container .menu__item {
+    display: none;
+  }
+  .navbar .menu-container.show {
+    height: 15rem;
+    padding: 30px;
+    border: 2px solid #000000;
+    border-top-color: #FFFEEB;
+    border-top-width: 4px;
+    gap: 1.5rem;
+    transition: height 200ms ease, padding 200ms ease, gap 200ms ease;
+  }
+  .navbar .menu-container.show .menu__item {
+    display: block;
+  }
+  .navbar .navbar__menubtn {
+    display: block;
+    background-color: #000000;
+    background-size: contain;
+    width: 40px;
+    height: 30px;
+    cursor: pointer;
+  }
+  .navbar .navbar__menubtn.close {
+    background-color: red;
+  }
+}/*# sourceMappingURL=style.css.map */

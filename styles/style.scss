@@ -1,0 +1,136 @@
+$backgroundColor: #FFFEEB;
+$textPrimaryColor: #000000;
+
+$headersFont: 'Archivo Black',sans-serif;
+$mainFont: 'Space Mono',monospace;
+
+$tablet: 800px;
+
+$paddingInline: 4rem;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem $paddingInline;
+    border-bottom: 2px solid black;
+    .navbar__menubtn {
+        display: none;
+    }
+    .navbar__container {
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+        .navbar-logo {
+            & img {
+                width: 40px;
+            }
+        }
+        .menu__item {
+            font-family: $mainFont;
+            font-size: calc(20rem/16);
+            text-decoration: none;
+            text-transform: uppercase;
+            color: $textPrimaryColor;
+            position: relative;
+            padding: 5px;
+            cursor: pointer;
+            border: 2px solid transparent;
+            &::after {
+                content: "";
+                position: absolute;
+                width: 0;
+                height: 2px;
+                background-color: $textPrimaryColor;
+                left: 0;
+                bottom: 0;
+                transition: width 0.3s ease-in-out;
+            }
+            &:hover::after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                background-color: $textPrimaryColor;
+                left: 0;
+                bottom: 0;
+                transition: width 0.3s ease-in-out;
+            }
+            &.active {
+                border: 2px solid $textPrimaryColor;
+            }
+            &.active::after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                background-color: $textPrimaryColor;
+                left: 0;
+                bottom: 0;
+                transition: width 0.3s ease-in-out;
+            }
+            &.active::before {
+                content: "";
+                position: absolute;
+                width: 2px;
+                height: 100%;
+                background-color: $textPrimaryColor;
+                left: 0;
+                bottom: 0;
+                transition: width 0.3s ease-in-out;
+            }
+        }
+    }
+    .menu-container {
+        gap: calc(60rem/16);
+    }
+}
+
+@media (max-width: $tablet) {
+    .navbar {
+        position: relative;
+        .menu-container {
+                height: 0;
+                flex-direction: column;
+                gap: 0;
+                padding-left: 30px;
+                padding-right: 30px;
+                position: absolute;
+                top: calc(100%);
+                right: calc(0% + ($paddingInline/1.5));
+                transition: height 200ms ease, padding 200ms ease, gap 200ms ease;
+            .menu__item {
+                display: none;
+                }
+            &.show {
+                height: 15rem;
+                padding: 30px;
+                border: 2px solid $textPrimaryColor;
+                border-top-color: $backgroundColor;
+                border-top-width: 4px;
+                gap: 1.5rem;
+                transition: height 200ms ease, padding 200ms ease, gap 200ms ease;
+                .menu__item {
+                    display: block;
+                    }
+                }
+            }
+        .navbar__menubtn {
+            display: block;
+            background-color: $textPrimaryColor;
+            background-size: contain;
+            width: 40px;
+            height: 30px;
+            cursor: pointer;
+            &.close {
+                background-color: red;
+            }
+        }
+    }
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <title>HM</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a class="navbar-logo" href="https://www.linkedin.com/in/hana-maru%C5%A1kevi%C4%8Dov%C3%A1-11287127b/">
+                <img src="assets/logos/linkedin.svg" alt="linkedin page">
+            </a>
+            <a class="navbar-logo" href="https://github.com/Hanka8">
+                <img src="assets/logos/github.svg" alt="github page">
+            </a>
+        </div>
+        <button class="navbar__menubtn" id="hamburgerBtn"></button>
+        <menu class="navbar__container menu-container">
+            <a class="menu__item">about me</a>
+            <a class="menu__item">projects</a>
+            <a class="menu__item">contact</a>
+        </menu>
+    </nav>
+    
+
+
+</body>
+
+<script>
+    const menuItems = document.querySelectorAll('.menu__item');
+    const hamburgerBtn = document.querySelector('#hamburgerBtn');
+    const menuContainer = document.querySelector('.menu-container');
+
+    menuItems.forEach(item => {
+        if (window.screen.width > 800) {
+            item.addEventListener('click', (e) => {
+                menuItems.forEach(item => item.classList.remove('active'));
+                e.target.classList.add('active');
+            });
+        } else {
+            item.addEventListener('click', () => {
+                hamburgerBtn.classList.remove('close');
+                menuContainer.classList.remove('show');
+            });
+        }
+    });
+
+    hamburgerBtn.addEventListener('click', () => {
+        hamburgerBtn.classList.toggle('close');
+        menuContainer.classList.toggle('show');
+    });
+
+</script>
+</html>
