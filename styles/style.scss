@@ -37,6 +37,10 @@ $paddingInline: 4rem;
     box-sizing: border-box;
 }
 
+body {
+    background-color: $backgroundColor;
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -118,6 +122,29 @@ $paddingInline: 4rem;
 .landing {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    gap: 8.33%;
+    margin-top: 41px;
+    margin-inline: $paddingInline;
+    .col-4 {
+        background-image: url("../assets/images/desktop/block.png");
+        background-repeat: no-repeat;
+        flex-basis: 850px;
+        padding-left: 120px;
+        .h-1 {
+            margin-bottom: 48px;
+        }
+        .h-2 {
+            margin-bottom: 48px;
+        }
+        .text {
+            padding-bottom: 40px;
+        }
+    }
+}
+
+.about {
+    min-height: 100vh;
 }
 
 @media (max-width: $tablet) {
