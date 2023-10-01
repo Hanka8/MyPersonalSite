@@ -28,14 +28,14 @@
             <span class="menubtn__line line-three"></span>
         </button>
         <menu class="navbar__container menu-container">
-            <a class="menu__item">about me</a>
-            <a class="menu__item">projects</a>
-            <a class="menu__item">contact</a>
+            <a class="menu__item" href="#about">about me</a>
+            <a class="menu__item" href="#projects">projects</a>
+            <a class="menu__item" href="#contact">contact</a>
         </menu>
     </nav>
 
     <section class="landing">
-        <div class="landing__col col-4">
+        <div class="landing__col col-1">
             <h1 class="h-1">Hana<br>Maruškevičová</h1>
             <h2 class="h-2">frontend developer</h2>
             <p class="text">Lorem ipsum dolor sit amet consectetur. Parturient malesuada sed at viverra malesuada at duis. Proin in ut elementum
@@ -46,11 +46,27 @@
         <picture class="landing__col col-2">
             <source media="(max-width: 800px)" srcset="assets/images/tablet/me.png">
             <img class="landing__img" src="assets/images/desktop/me.png">
-        </picture>
+        </picture>   
     </section>
-    
-    <section class="about">
-        
+
+    <div class="scroll-filling">
+        <!-- <hr class="rule"> -->
+    </div>
+
+    <section id="about" class="about">
+        <p class="about__col col-1 text">Lorem ipsum dolor sit amet consectetur. Parturient malesuada sed at viverra malesuada at duis. Proin in ut elementum
+            orci bibendum. Augue sollicitudin feugiat nisl arcu ut. Purus maecenas eget nibh molestie et proin ornare eget faucibus.
+            Lorem ipsum dolor sit amet consectetur. Parturient malesuada sed at viverra malesuada at duis. Proin in ut elementum
+            orci bibendum. Augue sollicitudin feugiat nisl arcu ut. Parturient malesuada sed at viverra malesuada at duis. Proin in
+            ut elementum orci bibendum. Augue sollicitudin feugiat nisl arcu ut.</p>
+        <p class="about__col col-2 text">Lorem ipsum dolor sit amet consectetur. Parturient malesuada sed at viverra malesuada at duis.
+            Proin in ut elementum
+            orci bibendum. Augue sollicitudin feugiat nisl arcu ut. Purus maecenas eget nibh molestie et proin ornare eget
+            faucibus.
+            Lorem ipsum dolor sit amet consectetur. Parturient malesuada sed at viverra malesuada at duis. Proin in ut elementum
+            orci bibendum. Augue sollicitudin feugiat nisl arcu ut. Parturient malesuada sed at viverra malesuada at duis. Proin
+            in
+            ut elementum orci bibendum. Augue sollicitudin feugiat nisl arcu ut.</p>
     </section>
 
 </body>
@@ -60,6 +76,31 @@
     const hamburgerBtn = document.querySelector('#hamburgerBtn');
     const menuContainer = document.querySelector('.menu-container');
     const navbar = document.querySelector('.navbar');
+    const about = document.querySelector('.about');
+
+    function showScroll() {
+        console.log(window.scrollY);
+    }
+
+    function setSectionHeight(section) {
+        section.style.height = window.innerHeight - navbar.offsetHeight + "px";
+    }
+  
+    function landingScrollChange() {
+        if (window.scrollY > 20) {
+            let rgb1 = 255 - window.scrollY / 20 < 234 ? 227 : 255 - window.scrollY / 20;
+            let rgb2 = 254 - window.scrollY / 20 < 233 ? 226 : 254 - window.scrollY / 20;
+            let rgb3 = 235 - window.scrollY / 20 < 214 ? 207 : 235 - window.scrollY / 20;
+            document.querySelector(".scroll-filling").style.backgroundColor = `rgb(${rgb1}, ${rgb2}, ${rgb3})`;
+            let percent = window.scrollY > 810 ? 100 : window.scrollY / 810 * 100;
+            document.querySelector(".landing__col.col-1").style.opacity = `${100 - percent}%`;
+            document.querySelector(".landing__col.col-2").style.opacity = `${100 - percent}%`;
+ 
+        } else {
+           document.querySelector(".landing__img").style.filter = "none";
+           document.querySelector(".scroll-filling").style.backgroundColor = "rgb(255, 254, 235)";
+        }
+    }
 
     menuItems.forEach(item => {
         if (window.screen.width > 800) {
@@ -93,7 +134,10 @@
         } else {
             navbar.classList.remove('scrolled');
         }
+        setSectionHeight(about);
+        landingScrollChange();
     });
+
 
 </script>
 </html>

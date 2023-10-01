@@ -14,7 +14,7 @@ a {
 }
 
 //VARIABLES
-$backgroundColor: #FFFEEB;
+$backgroundColor: rgb(255, 254, 235);
 $textPrimaryColor: #000000;
 
 $headersFont: 'Archivo Black',sans-serif;
@@ -27,19 +27,20 @@ $paddingInline: 4rem;
 //UTILITY
 .h-1 {
     font-family: $headersFont;
-    font-size: calc(70rem/16);
+    font-size: 4.5vw;
     text-transform: uppercase;
 }
 
 .h-2 {
     font-family: $headersFont;
-    font-size: 2rem;
+    font-size: 2vw;
     text-transform: uppercase;
 }
 
 .text {
     font-family: $mainFont;
-    font-size: calc(20rem/16);
+    font-size: 1.2vw;
+    text-align: justify;
 }
 
 .text-outline {
@@ -47,16 +48,33 @@ $paddingInline: 4rem;
     color: transparent;
 }
 
+.scroll-filling {
+    height: 100vh;
+}
+
+.rule {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #000000;
+    bottom: 40px;
+}
+
 body {
     background-color: $backgroundColor;
 }
 
 .navbar {
+    position: sticky;
+    top: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem $paddingInline;
+    padding: 1rem $paddingInline;
     border-bottom: 2px solid black;
+    background-color: $backgroundColor;
+    z-index: 100;
     .navbar__menubtn {
         display: none;
     }
@@ -129,37 +147,56 @@ body {
 }
 
 .landing {
+    position: fixed;
+    z-index: 1;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     gap: 8.33%;
-    margin-top: 41px;
     margin-inline: $paddingInline;
-    .col-4 {
+    height: calc(100dvh - 76px);
+    .col-1 {
         background-image: url("../assets/images/desktop/block.png");
         background-repeat: no-repeat;
-        flex-basis: 850px;
-        padding-left: 120px;
+        background-size: cover;
+        flex-basis: 50vw;
+        padding-left: 9vw;
+        padding-right: 3vw;
         .h-1 {
-            margin-bottom: 48px;
+            margin-bottom: 2.3vw;
         }
         .h-2 {
-            margin-bottom: 48px;
+            margin-bottom: 3vw;
         }
         .text {
-            padding-bottom: 40px;
+            padding-bottom: 5vw;
+        }
+    }
+    .col-2 {
+        & img {
+            width: 100%;
         }
     }
 }
 
 .about {
-    min-height: 100vh;
+    background-color: $backgroundColor;
+    background-image: url("../assets/images/desktop/about.png");
+    background-position: center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    padding: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8vw;
+    position: relative;
+    z-index: 2;
 }
 
 @media (max-width: $tablet) {
     $paddingInline: 2rem;
     .navbar {
-        position: sticky;
         top: 0;
         padding: 1rem $paddingInline;
         &.scrolled {
@@ -232,6 +269,44 @@ body {
                     transform-origin: 0;
                     transition: 150ms ease;
                 }
+            }
+        }
+    }
+
+    .landing {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+        margin-top: 28px;
+        margin-bottom: 40px;
+        margin-inline: 0;
+        gap: 28px;
+        .col-1 {
+            padding-left: 13vw;
+            padding-right: $paddingInline;
+            background-size: contain;
+            flex-basis: content;
+            .h-1 {
+                margin-top: 3.5vw;
+                font-size: 8vw;
+                margin-bottom: 6vw;
+            }
+            .h-2 {
+                font-size: 5vw;
+                margin-bottom: 5.25vw;
+            }
+            .text {
+                font-size: 2.5vw;
+                padding-bottom: 24px;
+            }
+        }
+        .col-2 {
+            position: absolute;
+            bottom: 24px;
+            display: flex;
+            justify-content: center;
+            & img {
+                width: 80%;
             }
         }
     }
