@@ -196,6 +196,17 @@ body {
 
 @media (max-width: $tablet) {
     $paddingInline: 2rem;
+    .h-1 {
+            font-size: 8vw;
+        }
+    
+        .h-2 {
+            font-size: 5vw;
+        }
+    
+        .text {
+            font-size: 2.5vw;
+        }
     .navbar {
         top: 0;
         padding: 1rem $paddingInline;
@@ -288,26 +299,30 @@ body {
             flex-basis: content;
             .h-1 {
                 margin-top: 3.5vw;
-                font-size: 8vw;
                 margin-bottom: 6vw;
             }
             .h-2 {
-                font-size: 5vw;
                 margin-bottom: 5.25vw;
             }
             .text {
-                font-size: 2.5vw;
                 padding-bottom: 24px;
             }
         }
         .col-2 {
             position: absolute;
-            bottom: 24px;
+            bottom: 76px;
             display: flex;
             justify-content: center;
             & img {
                 width: 80%;
             }
         }
+    }
+
+    .about {
+        flex-direction: column;
+        background-image: url("../assets/images/tablet/about.png");
+        gap: 16vw;
+
     }
 }

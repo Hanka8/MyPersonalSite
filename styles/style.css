@@ -179,6 +179,15 @@ body {
 }
 
 @media (max-width: 800px) {
+  .h-1 {
+    font-size: 8vw;
+  }
+  .h-2 {
+    font-size: 5vw;
+  }
+  .text {
+    font-size: 2.5vw;
+  }
   .navbar {
     top: 0;
     padding: 1rem 2rem;
@@ -271,24 +280,26 @@ body {
   }
   .landing .col-1 .h-1 {
     margin-top: 3.5vw;
-    font-size: 8vw;
     margin-bottom: 6vw;
   }
   .landing .col-1 .h-2 {
-    font-size: 5vw;
     margin-bottom: 5.25vw;
   }
   .landing .col-1 .text {
-    font-size: 2.5vw;
     padding-bottom: 24px;
   }
   .landing .col-2 {
     position: absolute;
-    bottom: 24px;
+    bottom: 76px;
     display: flex;
     justify-content: center;
   }
   .landing .col-2 img {
     width: 80%;
+  }
+  .about {
+    flex-direction: column;
+    background-image: url("../assets/images/tablet/about.png");
+    gap: 16vw;
   }
 }/*# sourceMappingURL=style.css.map */
