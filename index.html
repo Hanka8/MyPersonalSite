@@ -59,7 +59,11 @@
             Lorem ipsum dolor sit amet consectetur. Parturient malesuada sed at viverra malesuada at duis. Proin in ut elementum
             orci bibendum. Augue sollicitudin feugiat nisl arcu ut. Parturient malesuada sed at viverra malesuada at duis. Proin in
             ut elementum orci bibendum. Augue sollicitudin feugiat nisl arcu ut.</p>
-        <p class="about__col col-2 text">Lorem ipsum dolor sit amet consectetur. Parturient malesuada sed at viverra malesuada at duis.
+        <picture>
+            <source media="(max-width: 800px)" srcset="assets/images/tablet/about.png">
+            <img class="about__col col-2" src="assets/images/desktop/about.png">
+        </picture>
+        <p class="about__col col-3 text">Lorem ipsum dolor sit amet consectetur. Parturient malesuada sed at viverra malesuada at duis.
             Proin in ut elementum
             orci bibendum. Augue sollicitudin feugiat nisl arcu ut. Purus maecenas eget nibh molestie et proin ornare eget
             faucibus.
@@ -69,7 +73,9 @@
             ut elementum orci bibendum. Augue sollicitudin feugiat nisl arcu ut.</p>
     </section>
 
-    <div class="scroll-filling"></div>
+    <div id="projects" class="scroll-filling" style="background-color: brown;">
+        <img src="assets/images/desktop/me.png" style="margin-top: 300px;">
+    </div>
 
 </body>
 
@@ -79,10 +85,7 @@
     const menuContainer = document.querySelector('.menu-container');
     const navbar = document.querySelector('.navbar');
     const about = document.querySelector('.about');
-
-    function showScroll() {
-        console.log(window.scrollY);
-    }
+    const projects = document.querySelector('#projects');
 
     function setSectionHeight(section) {
         section.style.height = window.innerHeight - navbar.offsetHeight + "px";
@@ -101,6 +104,31 @@
         } else {
            document.querySelector(".landing__img").style.filter = "none";
            document.querySelector(".scroll-filling").style.backgroundColor = "rgb(255, 254, 235)";
+        }
+    }
+
+    function aboutScrollChange() {
+        let aboutOffset = about.offsetTop - navbar.offsetHeight;
+        let scrollOffset = window.scrollY;
+        let projectsOffset = projects.offsetTop - navbar.offsetHeight;
+        const col1 = about.querySelector(".about__col.col-1");
+        const col3 = about.querySelector(".about__col.col-3");
+        const ilustration = about.querySelector(".about__col.col-2");
+        if (scrollOffset > projectsOffset) {
+            ilustration.style.rotate = "180deg";
+        }
+        else if (scrollOffset > aboutOffset) {
+            col1.style.position = "relative";
+            col1.style.right = `${scrollOffset - aboutOffset}px`;
+            col1.style.top = `${(scrollOffset - aboutOffset)*0.8}px`;
+            col3.style.position = "relative";
+            col3.style.left = `${scrollOffset - aboutOffset}px`;
+            col3.style.top = `${(scrollOffset - aboutOffset)*0.8}px`;
+            ilustration.style.position = "relative";
+            ilustration.style.rotate = `${(-scrollOffset - aboutOffset)*0.2}deg`;
+            ilustration.style.top = `${(scrollOffset - aboutOffset)*0.8}px`;
+        }  else {
+            ilustration.style.rotate = "0deg";
         }
     }
 
@@ -138,6 +166,7 @@
         }
         setSectionHeight(about);
         landingScrollChange();
+        aboutScrollChange();
     });
 
 

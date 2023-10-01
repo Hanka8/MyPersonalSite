@@ -299,7 +299,7 @@ body {
   }
   .about {
     flex-direction: column;
-    background-image: url("../assets/images/tablet/about.png");
+    background-image: none;
     gap: 16vw;
   }
 }/*# sourceMappingURL=style.css.map */
