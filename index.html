@@ -34,7 +34,7 @@
         </menu>
     </nav>
 
-    <section class="landing scroll-snap">
+    <section class="landing">
         <div class="landing__col col-1">
             <h1 class="h-1">Hana<br>Maruškevičová</h1>
             <h2 class="h-2">frontend developer</h2>
@@ -49,11 +49,9 @@
         </picture>   
     </section>
 
-    <div class="scroll-filling">
-        <!-- <hr class="rule"> -->
-    </div>
+    <div class="scroll-filling"></div>
 
-    <section id="about" class="about scroll-snap">
+    <section id="about" class="about">
         <p class="about__col col-1 text">Lorem ipsum dolor sit amet consectetur. Parturient malesuada sed at viverra malesuada at duis. Proin in ut elementum
             orci bibendum. Augue sollicitudin feugiat nisl arcu ut. Purus maecenas eget nibh molestie et proin ornare eget faucibus.
             Lorem ipsum dolor sit amet consectetur. Parturient malesuada sed at viverra malesuada at duis. Proin in ut elementum
@@ -73,9 +71,17 @@
             ut elementum orci bibendum. Augue sollicitudin feugiat nisl arcu ut.</p>
     </section>
 
-    <div id="projects" class="scroll-filling" style="background-color: brown;">
-        <img src="assets/images/desktop/me.png" style="margin-top: 300px;">
-    </div>
+    <section id="projects" class="projects">
+        <picture>
+            <img src="assets/images/desktop/project1.png" alt="project number 1">
+        </picture>
+        <picture>
+            <img src="assets/images/desktop/project2.png" alt="project number 2">
+        </picture>
+        <picture>
+            <img src="assets/images/desktop/project3.png" alt="project number 3">
+        </picture>
+    </section>
 
 </body>
 
@@ -125,11 +131,10 @@
             col3.style.top = `${(scrollOffset - aboutOffset)*0.8}px`;
             ilustration.style.position = "relative";
             ilustration.style.opacity = `${30 - (scrollOffset - aboutOffset)*0.1}%`;
-            landing.style.position = "relative";
-            scrollFilling.style.position = "absolute";
-            scrollFilling.style.display = "none";
+            // landing.style.position = "relative";
+            // scrollFilling.style.position = "absolute";
+            // scrollFilling.style.display = "none";
         }  else {
-            ilustration.style.rotate = "0deg";
             ilustration.style.opacity = "100%";
         }
     }

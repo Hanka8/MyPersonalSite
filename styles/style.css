@@ -49,10 +49,6 @@ a {
   bottom: 40px;
 }
 
-.scroll-snap {
-  scroll-snap-align: start;
-}
-
 body {
   background-color: rgb(255, 254, 235);
   overflow-y: scroll;
@@ -186,6 +182,20 @@ body {
   z-index: 2;
 }
 
+.projects {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 2rem;
+}
+.projects picture {
+  flex-shrink: 2;
+}
+.projects picture img {
+  width: 100%;
+}
+
 @media (max-width: 800px) {
   .h-1 {
     font-size: 8vw;
@@ -271,6 +281,10 @@ body {
     transform-origin: 0;
     transition: 150ms ease;
   }
+  .scroll-filling {
+    position: absolute;
+    display: none;
+  }
   .landing {
     flex-direction: column;
     justify-content: flex-start;
@@ -279,6 +293,7 @@ body {
     margin-bottom: 40px;
     margin-inline: 0;
     gap: 28px;
+    position: relative;
   }
   .landing .col-1 {
     padding-left: 13vw;
@@ -310,6 +325,7 @@ body {
     background-image: none;
     gap: 16vw;
     overflow-x: hidden;
+    overflow-y: hidden;
   }
   .about .about__col {
     width: 100%;

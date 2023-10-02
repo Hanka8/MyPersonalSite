@@ -61,10 +61,6 @@ $paddingInline: 4rem;
     bottom: 40px;
 }
 
-.scroll-snap {
-    scroll-snap-align: start;
-}
-
 body {
     background-color: $backgroundColor;
     overflow-y: scroll;
@@ -202,6 +198,22 @@ body {
     z-index: 2;
 }
 
+.projects {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding: 2rem;
+    & picture {
+        flex-shrink: 2;
+        & img {
+            width: 100%;
+        }
+    }
+}
+
+// ************* RESPONSIBILITY **************
+
 @media (max-width: $tablet) {
     $paddingInline: 2rem;
     .h-1 {
@@ -292,6 +304,11 @@ body {
         }
     }
 
+    .scroll-filling {
+        position: absolute;
+        display: none;
+    }
+
     .landing {
         flex-direction: column;
         justify-content: flex-start;
@@ -300,6 +317,7 @@ body {
         margin-bottom: 40px;
         margin-inline: 0;
         gap: 28px;
+        position: relative;
         .col-1 {
             padding-left: 13vw;
             padding-right: $paddingInline;
@@ -332,6 +350,7 @@ body {
         background-image: none;
         gap: 16vw;
         overflow-x: hidden;
+        overflow-y: hidden;
         .about__col {
             width: 100%;
         }
