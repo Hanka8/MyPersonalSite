@@ -34,7 +34,7 @@
         </menu>
     </nav>
 
-    <section class="landing">
+    <section class="landing scroll-snap">
         <div class="landing__col col-1">
             <h1 class="h-1">Hana<br>Maruškevičová</h1>
             <h2 class="h-2">frontend developer</h2>
@@ -53,7 +53,7 @@
         <!-- <hr class="rule"> -->
     </div>
 
-    <section id="about" class="about">
+    <section id="about" class="about scroll-snap">
         <p class="about__col col-1 text">Lorem ipsum dolor sit amet consectetur. Parturient malesuada sed at viverra malesuada at duis. Proin in ut elementum
             orci bibendum. Augue sollicitudin feugiat nisl arcu ut. Purus maecenas eget nibh molestie et proin ornare eget faucibus.
             Lorem ipsum dolor sit amet consectetur. Parturient malesuada sed at viverra malesuada at duis. Proin in ut elementum
@@ -86,6 +86,8 @@
     const navbar = document.querySelector('.navbar');
     const about = document.querySelector('.about');
     const projects = document.querySelector('#projects');
+    const landing = document.querySelector('.landing');
+    const scrollFilling = document.querySelector('.scroll-filling');
 
     function setSectionHeight(section) {
         section.style.height = window.innerHeight - navbar.offsetHeight + "px";
@@ -114,10 +116,7 @@
         const col1 = about.querySelector(".about__col.col-1");
         const col3 = about.querySelector(".about__col.col-3");
         const ilustration = about.querySelector(".about__col.col-2");
-        if (scrollOffset > projectsOffset) {
-            ilustration.style.rotate = "180deg";
-        }
-        else if (scrollOffset > aboutOffset) {
+        if (scrollOffset > aboutOffset) {
             col1.style.position = "relative";
             col1.style.right = `${scrollOffset - aboutOffset}px`;
             col1.style.top = `${(scrollOffset - aboutOffset)*0.8}px`;
@@ -125,10 +124,13 @@
             col3.style.left = `${scrollOffset - aboutOffset}px`;
             col3.style.top = `${(scrollOffset - aboutOffset)*0.8}px`;
             ilustration.style.position = "relative";
-            ilustration.style.rotate = `${(-scrollOffset - aboutOffset)*0.2}deg`;
-            ilustration.style.top = `${(scrollOffset - aboutOffset)*0.8}px`;
+            ilustration.style.opacity = `${30 - (scrollOffset - aboutOffset)*0.1}%`;
+            landing.style.position = "relative";
+            scrollFilling.style.position = "absolute";
+            scrollFilling.style.display = "none";
         }  else {
             ilustration.style.rotate = "0deg";
+            ilustration.style.opacity = "100%";
         }
     }
 
@@ -158,6 +160,7 @@
         }
     });
 
+    // add scroll animations
     document.addEventListener('scroll', () => {
         if (window.scrollY > 1) {
             navbar.classList.add('scrolled');

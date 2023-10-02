@@ -49,8 +49,16 @@ a {
   bottom: 40px;
 }
 
+.scroll-snap {
+  scroll-snap-align: start;
+}
+
 body {
   background-color: rgb(255, 254, 235);
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  height: 100%;
+  scroll-behavior: smooth;
 }
 
 .navbar {
@@ -290,7 +298,7 @@ body {
   }
   .landing .col-2 {
     position: absolute;
-    bottom: 76px;
+    bottom: 28px;
     display: flex;
     justify-content: center;
   }
@@ -301,5 +309,9 @@ body {
     flex-direction: column;
     background-image: none;
     gap: 16vw;
+    overflow-x: hidden;
+  }
+  .about .about__col {
+    width: 100%;
   }
 }/*# sourceMappingURL=style.css.map */

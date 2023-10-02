@@ -61,8 +61,16 @@ $paddingInline: 4rem;
     bottom: 40px;
 }
 
+.scroll-snap {
+    scroll-snap-align: start;
+}
+
 body {
     background-color: $backgroundColor;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    height: 100%;
+    scroll-behavior: smooth;
 }
 
 .navbar {
@@ -310,7 +318,7 @@ body {
         }
         .col-2 {
             position: absolute;
-            bottom: 76px;
+            bottom: 28px;
             display: flex;
             justify-content: center;
             & img {
@@ -323,6 +331,9 @@ body {
         flex-direction: column;
         background-image: none;
         gap: 16vw;
-
+        overflow-x: hidden;
+        .about__col {
+            width: 100%;
+        }
     }
 }
