@@ -181,18 +181,26 @@ body {
   position: relative;
   z-index: 2;
 }
+.about picture {
+  display: none;
+}
 
 .projects {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+.projects .projects__container {
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: 2rem;
   flex-wrap: wrap;
   padding: 2rem;
 }
-.projects picture {
+.projects .projects__container picture {
   flex-shrink: 2;
 }
-.projects picture img {
+.projects .projects__container picture img {
   width: 100%;
 }
 
@@ -329,5 +337,8 @@ body {
   }
   .about .about__col {
     width: 100%;
+  }
+  .about picture {
+    display: block;
   }
 }/*# sourceMappingURL=style.css.map */

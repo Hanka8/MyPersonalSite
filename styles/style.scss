@@ -196,18 +196,27 @@ body {
     gap: 8vw;
     position: relative;
     z-index: 2;
+    & picture {
+        display: none;
+    }
 }
 
 .projects {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    flex-wrap: wrap;
-    padding: 2rem;
-    & picture {
-        flex-shrink: 2;
-        & img {
-            width: 100%;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    & .projects__container {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+        padding: 2rem;
+        & picture {
+            flex-shrink: 2;
+    
+            & img {
+                width: 100%;
+            }
         }
     }
 }
@@ -353,6 +362,9 @@ body {
         overflow-y: hidden;
         .about__col {
             width: 100%;
+        }
+        & picture {
+            display: block;
         }
     }
 }

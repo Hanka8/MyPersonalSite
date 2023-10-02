@@ -72,15 +72,18 @@
     </section>
 
     <section id="projects" class="projects">
-        <picture>
-            <img src="assets/images/desktop/project1.png" alt="project number 1">
-        </picture>
-        <picture>
-            <img src="assets/images/desktop/project2.png" alt="project number 2">
-        </picture>
-        <picture>
-            <img src="assets/images/desktop/project3.png" alt="project number 3">
-        </picture>
+        <h2 class="h-2">projects</h2>
+        <div class="projects__container">
+            <picture>
+                <img src="assets/images/desktop/project1.png" alt="project number 1">
+            </picture>
+            <picture>
+                <img src="assets/images/desktop/project2.png" alt="project number 2">
+            </picture>
+            <picture>
+                <img src="assets/images/desktop/project3.png" alt="project number 3">
+            </picture>
+        </div>
     </section>
 
 </body>
@@ -135,6 +138,8 @@
             // scrollFilling.style.position = "absolute";
             // scrollFilling.style.display = "none";
         }  else {
+            col1.style.position = "static";
+            col3.style.position = "static";
             ilustration.style.opacity = "100%";
         }
     }
