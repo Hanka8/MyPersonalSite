@@ -195,6 +195,7 @@ body {
     align-items: center;
     gap: 8vw;
     position: relative;
+    overflow-x: hidden;
     z-index: 2;
     & picture {
         display: none;
@@ -358,8 +359,7 @@ body {
         flex-direction: column;
         background-image: none;
         gap: 16vw;
-        overflow-x: hidden;
-        overflow-y: hidden;
+        overflow: hidden;
         .about__col {
             width: 100%;
         }

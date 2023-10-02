@@ -179,6 +179,7 @@ body {
   align-items: center;
   gap: 8vw;
   position: relative;
+  overflow-x: hidden;
   z-index: 2;
 }
 .about picture {
@@ -332,8 +333,7 @@ body {
     flex-direction: column;
     background-image: none;
     gap: 16vw;
-    overflow-x: hidden;
-    overflow-y: hidden;
+    overflow: hidden;
   }
   .about .about__col {
     width: 100%;
