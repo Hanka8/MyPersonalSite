@@ -206,17 +206,44 @@ body {
     display: grid;
     place-items: center;
     min-height: 100vh;
-    & .projects__container {
+    .projects__container {
         display: flex;
         justify-content: center;
         gap: 2rem;
         flex-wrap: wrap;
         padding: 2rem;
-        & picture {
-            flex-shrink: 2;
-    
-            & img {
-                width: 100%;
+        .container_col {
+            padding: 2rem;
+            background-image: url("../assets/images/desktop/simplex.png");
+            a {
+                display: block;
+                background-size: cover;
+                background-repeat: no-repeat;
+                width: 330px;
+                max-width: 70vw;
+                aspect-ratio: 1.5;
+                transition: 200ms;
+                &:hover {
+                    scale: 1.1;
+                    transition: 200ms;
+                }
+            }
+            .text {
+                margin-top: 1rem;
+                padding: .5rem;
+                background-color: $backgroundColor;
+            }
+            .project1 {
+                background-image: url("../assets/images/desktop/project1.png");
+            }
+            .project2 {
+                background-image: url("../assets/images/desktop/project2.png");
+            }
+            .project3 {
+                background-image: url("../assets/images/desktop/project3.png");
+            }
+            .project4 {
+                background-image: url("../assets/images/desktop/project4.png");
             }
         }
     }
@@ -358,7 +385,7 @@ body {
     .about {
         flex-direction: column;
         background-image: none;
-        gap: 16vw;
+        gap: 8vw;
         overflow: hidden;
         .about__col {
             width: 100%;

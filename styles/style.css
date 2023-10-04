@@ -198,11 +198,39 @@ body {
   flex-wrap: wrap;
   padding: 2rem;
 }
-.projects .projects__container picture {
-  flex-shrink: 2;
+.projects .projects__container .container_col {
+  padding: 2rem;
+  background-image: url("../assets/images/desktop/simplex.png");
 }
-.projects .projects__container picture img {
-  width: 100%;
+.projects .projects__container .container_col a {
+  display: block;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 330px;
+  max-width: 70vw;
+  aspect-ratio: 1.5;
+  transition: 200ms;
+}
+.projects .projects__container .container_col a:hover {
+  scale: 1.1;
+  transition: 200ms;
+}
+.projects .projects__container .container_col .text {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  background-color: rgb(255, 254, 235);
+}
+.projects .projects__container .container_col .project1 {
+  background-image: url("../assets/images/desktop/project1.png");
+}
+.projects .projects__container .container_col .project2 {
+  background-image: url("../assets/images/desktop/project2.png");
+}
+.projects .projects__container .container_col .project3 {
+  background-image: url("../assets/images/desktop/project3.png");
+}
+.projects .projects__container .container_col .project4 {
+  background-image: url("../assets/images/desktop/project4.png");
 }
 
 @media (max-width: 800px) {
@@ -332,7 +360,7 @@ body {
   .about {
     flex-direction: column;
     background-image: none;
-    gap: 16vw;
+    gap: 8vw;
     overflow: hidden;
   }
   .about .about__col {
