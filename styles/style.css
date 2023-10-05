@@ -44,8 +44,24 @@ a {
   font-style: italic;
 }
 
+.centered {
+  text-align: center;
+}
+
+.link {
+  text-decoration: none;
+  color: #000000;
+  font-weight: 700;
+}
+.link:hover {
+  text-decoration: underline;
+}
+
 .horizontal-rule {
   width: 100%;
+  color: #000000;
+  background-color: #000000;
+  height: 2px;
 }
 
 .copy-message {

@@ -56,8 +56,24 @@ $paddingInline: 4rem;
     font-style: italic;
 }
 
+.centered {
+    text-align: center;
+}
+
+.link {
+    text-decoration: none;
+    color: $textPrimaryColor;
+    font-weight: 700;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
 .horizontal-rule {
     width: 100%;
+    color: $textPrimaryColor;
+    background-color: $textPrimaryColor;
+    height: 2px;
 }
 
 .copy-message {
