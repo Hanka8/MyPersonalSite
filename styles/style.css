@@ -185,7 +185,7 @@ body {
   gap: 8vw;
   position: relative;
   overflow-x: hidden;
-  z-index: 2;
+  z-index: 3;
 }
 .about picture {
   display: none;
@@ -195,6 +195,8 @@ body {
 }
 
 .projects {
+  position: relative;
+  z-index: 2;
   display: grid;
   place-items: center;
   min-height: 100vh;
@@ -202,13 +204,19 @@ body {
 .projects .projects__container {
   display: flex;
   justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
+  gap: 4rem;
+  flex-direction: column;
   padding: 2rem;
 }
 .projects .projects__container .container_col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   padding: 2rem;
   background-image: url("../assets/images/desktop/simplex.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .projects .projects__container .container_col a {
   display: block;
