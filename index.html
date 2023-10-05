@@ -93,12 +93,12 @@
     <section id="contact" class="contact">
         <div class="contact__container">
             <div class="container__col text">
-                <p class="copy-message">mail has been copied to clipboard</p>
+                <p class="copy-message">mail copied</p>
                 <img class="copy" src="assets/logos/mail.svg" alt="mail icon">
                 <a href="mailto:hanka.maruskevicova@gmail.com">hanka.maruskevicova@gmail.com</a>
             </div>
             <div class="container__col text">
-                <p class="copy-message">phone number has been copied to clipboard</p>
+                <p class="copy-message">phone number copied</p>
                 <img class="copy" src="assets/logos/phone.svg" alt="phone icon">
                 <p>+420 728 428 934</p>
             </div>
@@ -245,7 +245,7 @@
             // You're at the top of the page
         } else if (scrollTop < (scrollPositions.projects)) {
             menu__item[0].classList.add("active"); // About
-        } else if (scrollTop < (scrollPositions.contact - 100)) {
+        } else if (scrollTop < (scrollPositions.contact - 200)) {
             menu__item[1].classList.add("active"); // Projects
         } else {
             menu__item[2].classList.add("active"); // Contact

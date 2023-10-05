@@ -50,10 +50,12 @@ a {
 
 .copy-message {
   position: absolute;
-  bottom: 10px;
-  right: 10px;
-  background-color: #000000;
-  color: white;
+  bottom: 35px;
+  left: 15px;
+  background-color: rgba(0, 0, 0, 0.571);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  color: rgb(255, 254, 235);
   padding: 10px;
   border-radius: 5px;
   display: none;
@@ -172,10 +174,10 @@ body {
   padding-right: 3vw;
 }
 .landing .col-1 .h-1 {
-  margin-bottom: 2.3vw;
+  margin-bottom: 3.3vw;
 }
 .landing .col-1 .h-2 {
-  margin-bottom: 3vw;
+  margin-bottom: 4.3vw;
 }
 .landing .col-1 .text {
   padding-bottom: 5vw;
