@@ -207,20 +207,6 @@
         }
     });
 
-    // add scroll animations
-    document.addEventListener('scroll', () => {
-        if (window.scrollY > 1) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
-        setSectionHeight(about);
-        landingScrollChange();
-        aboutScrollChange();
-        setAboutOutline();
-        showUnderlineOnScroll();
-    });
-
     // underlining menu items on scroll
     const menu__item = document.querySelectorAll(".menu__item");
 
@@ -256,6 +242,21 @@
 
     copyBtns.forEach(btn => {
         btn.addEventListener('click', (e) => copyText(e.target));
+    });
+
+    document.addEventListener('scroll', () => {
+        if (window.scrollY > 1) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+        setSectionHeight(about);
+        landingScrollChange();
+        aboutScrollChange();
+        setAboutOutline();
+        if (window.screen.width > 800) {
+            showUnderlineOnScroll();
+        }
     });
 
 </script>
