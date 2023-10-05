@@ -75,21 +75,34 @@
             </div>
             <div class="container_col">
                 <a class="project2" href="https://maacaa0.github.io/31-hana-maca-final/"></a>
-                <p class="text">Website of the 31. CBRN regiment.</p>
+                <p class="text">Website of the 31. CBRN regiment. <span class="italics">beta version</span></p>
             </div>
             <div class="container_col">
                 <a class="project3" href="https://hanka8.github.io/FM-Password-generator/"></a>
-                <p class="text">Need to generate a strong password? Check this out!</p>
+                <p class="text">Password generator</p>
             </div>
             <div class="container_col">
                 <a class="project4" href="https://hanka8.github.io/NelaMarus/"></a>
-                <p class="text">Portfolio of my sister, who is an artist.</p>
+                <p class="text">Portfolio of my artist sister.</p>
             </div>
         </div>
     </section>
 
-    <section id="contact">
+    <hr class="horizontal-rule">
 
+    <section id="contact" class="contact">
+        <div class="contact__container">
+            <div class="container__col text">
+                <p class="copy-message">mail has been copied to clipboard</p>
+                <img class="copy" src="assets/logos/mail.svg" alt="mail icon">
+                <a href="mailto:hanka.maruskevicova@gmail.com">hanka.maruskevicova@gmail.com</a>
+            </div>
+            <div class="container__col text">
+                <p class="copy-message">phone number has been copied to clipboard</p>
+                <img class="copy" src="assets/logos/phone.svg" alt="phone icon">
+                <p>+420 728 428 934</p>
+            </div>
+        </div>
     </section>
 
 </body>
@@ -103,10 +116,22 @@
     const projects = document.querySelector('#projects');
     const landing = document.querySelector('.landing');
     const scrollFilling = document.querySelector('.scroll-filling');
+    const copyBtns = document.querySelectorAll('.copy');
+
+    function copyText(target) {
+        let copiedText = target.nextElementSibling.textContent;
+        navigator.clipboard.writeText(copiedText);
+
+        let copyMessage = target.parentElement.querySelector('.copy-message');
+        copyMessage.style.display = 'block';
+
+        setTimeout(function () {
+            copyMessage.style.display = 'none';
+        }, 2000);
+    }
 
     function setSectionHeight(section) {
         section.style.height = window.innerHeight*1.2 - navbar.offsetHeight + "px";
-
     }
 
     function setAboutOutline() {
@@ -197,7 +222,6 @@
     });
 
     // underlining menu items on scroll
-
     const menu__item = document.querySelectorAll(".menu__item");
 
     const scrollPositions = {
@@ -221,7 +245,7 @@
             // You're at the top of the page
         } else if (scrollTop < (scrollPositions.projects)) {
             menu__item[0].classList.add("active"); // About
-        } else if (scrollTop < (scrollPositions.contact)) {
+        } else if (scrollTop < (scrollPositions.contact - 100)) {
             menu__item[1].classList.add("active"); // Projects
         } else {
             menu__item[2].classList.add("active"); // Contact
@@ -230,6 +254,9 @@
         // console.log(`scrollPosition.section: ${scrollPositions.projects}`);
     }
 
+    copyBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => copyText(e.target));
+    });
 
 </script>
 </html>
