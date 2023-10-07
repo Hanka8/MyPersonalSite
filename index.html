@@ -45,26 +45,26 @@
         </div>
         <picture class="landing__col col-2">
             <source media="(max-width: 800px)" srcset="assets/images/tablet/me.png">
-            <img class="landing__img" src="assets/images/desktop/me.png">
+            <img class="landing__img" src="assets/images/desktop/me.png" alt="authors picture">
         </picture>   
     </section>
 
     <div class="scroll-filling"></div>
 
-    <section id="about" class="about">
+    <div id="about" class="about">
         <p class="about__col col-1 text">I've been diving into web development for the past two years. I feel fairly confident with HTML, CSS and JavaScript. Currently, I'm
         discovering backend architecture with Node.js - Express + MongoDB, and I plan to delve into frontend frameworks like React/Vue. I'm drawn to
         frontend development simply because I enjoy solving the visual aspects of a project, and I'd like to explore design as
         well. For now, I'm populating my GitHub with various experiments.</p>
         <picture>
             <source media="(max-width: 800px)" srcset="assets/images/tablet/about.png">
-            <img class="about__col col-2" src="assets/images/desktop/about.png">
+            <img class="about__col col-2" src="assets/images/desktop/about.png" alt="">
         </picture>
         <p class="about__col col-3 text">By day, I navigate the labyrinth of government bureaucracy, armed with patience and soft skills. But when the workday
         is over, I dive into the world of computers, a passion that's been with me since the days of Doom on my trusty old
         Pentium. I find the virtual realm to be the ultimate canvas for human creativity and intelligence. Join me as I embark
         on a journey to combine my skills and passion, aiming to carve out a career as a junior frontend developer.</p>
-    </section>
+    </div>
 
     <section id="projects" class="projects">
         <h2 class="h-2">projects</h2>
@@ -95,7 +95,7 @@
 
     <hr class="horizontal-rule">
 
-    <section id="contact" class="contact">
+    <footer id="contact" class="contact">
         <div class="contact__container">
             <div class="container__col text">
                 <p class="copy-message">mail copied</p>
@@ -108,9 +108,7 @@
                 <p>+420 728 428 934</p>
             </div>
         </div>
-    </section>
-
-</body>
+    </footer>
 
 <script>
     const menuItems = document.querySelectorAll('.menu__item');
@@ -241,8 +239,6 @@
         } else {
             menu__item[2].classList.add("active"); // Contact
         }
-        // console.log(`scrollTop: ${scrollTop}`);
-        // console.log(`scrollPosition.section: ${scrollPositions.projects}`);
     }
 
     copyBtns.forEach(btn => {
@@ -263,6 +259,6 @@
             showUnderlineOnScroll();
         }
     });
-
 </script>
+</body>
 </html>
