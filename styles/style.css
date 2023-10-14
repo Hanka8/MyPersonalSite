@@ -25,6 +25,10 @@ li {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 .h-1 {
   font-family: "Archivo Black", sans-serif;
   font-size: clamp(1rem, 4.5vw, 4rem);
@@ -79,6 +83,7 @@ li {
 }
 
 .link {
+  font-family: "Space Mono", monospace;
   color: #000000;
   text-decoration: none;
   border-bottom: 1px solid #000000;
@@ -343,7 +348,9 @@ li {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: 2rem;
+}
+.contact .contact__container a {
+  padding: 15px;
 }
 .contact .contact__container .container__col {
   position: relative;
@@ -351,10 +358,6 @@ li {
   justify-content: flex-start;
   align-items: center;
   gap: 2rem;
-}
-.contact .contact__container .container__col a {
-  text-decoration: none;
-  color: #000000;
 }
 .contact .contact__container .container__col img {
   width: 50px;

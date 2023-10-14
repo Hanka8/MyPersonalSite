@@ -90,16 +90,18 @@
 
     <footer id="contact" class="contact">
         <div class="contact__container">
-            <div class="container__col text">
-                <p class="copy-message">mail copied</p>
-                <img class="copy" src="assets/logos/mail.svg" alt="mail icon">
-                <a href="mailto:hanka.maruskevicova@gmail.com">hanka.maruskevicova@gmail.com</a>
-            </div>
-            <div class="container__col text">
-                <p class="copy-message">phone number copied</p>
-                <img class="copy" src="assets/logos/phone.svg" alt="phone icon">
-                <p>+420 728 428 934</p>
-            </div>
+            <a href="mailto:hanka.maruskevicova@gmail.com">
+                <div class="container__col text">
+                    <img class="copy" src="assets/logos/mail.svg" alt="mail icon">
+                    <p class="link">hanka.maruskevicova@gmail.com</p>
+                </div>
+            </a>
+            <a href="tel:+420728428934">
+                <div class="container__col text">
+                    <img class="copy" src="assets/logos/phone.svg" alt="phone icon">
+                    <p class="link">+420 728 428 934</p>
+                </div>
+            </a>
         </div>
     </footer>
 
@@ -241,10 +243,6 @@
     }
 
     topAnchor.addEventListener('click', topFunction);
-
-    copyBtns.forEach(btn => {
-        btn.addEventListener('click', (e) => copyText(e.target));
-    });
 
     document.addEventListener('scroll', () => {
         if (window.scrollY > 1) {

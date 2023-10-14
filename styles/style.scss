@@ -39,6 +39,10 @@ li {
     list-style: none;
 }
 
+a {
+    text-decoration: none;
+}
+
 //UTILITY
 .h-1 {
     font-family: $headersFont;
@@ -93,6 +97,7 @@ li {
 }
 
 .link {
+    font-family: $mainFont;
     color: $textPrimaryColor;
     text-decoration: none;
     border-bottom: 1px solid $textPrimaryColor;
@@ -357,17 +362,15 @@ li {
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
-        gap: 2rem;
+        a {
+                padding: 15px;
+            }
         .container__col {
             position: relative;
             display: flex;
             justify-content: flex-start;
             align-items: center;
             gap: 2rem;
-            a {
-                text-decoration: none;
-                color: #000000;
-            }
             img {
                 width: 50px;
                 &:hover {
