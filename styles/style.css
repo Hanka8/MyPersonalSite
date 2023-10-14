@@ -3,7 +3,7 @@ textarea,
 button,
 select,
 a {
-  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: #d07242;
 }
 
 * {
@@ -21,6 +21,11 @@ a {
 ::selection {
   background-color: #d07242;
   color: rgb(255, 254, 235);
+}
+
+html {
+  font-family: "Space Mono", monospace;
+  color: #000000;
 }
 
 body {
@@ -57,7 +62,6 @@ a:focus-visible {
 }
 
 .text {
-  font-family: "Space Mono", monospace;
   font-size: clamp(1rem, 1.2vw, 1.1rem);
   text-align: justify;
 }
@@ -79,12 +83,17 @@ a:focus-visible {
   text-align: center;
 }
 
+.tools {
+  margin-top: 1.5rem;
+  font-size: 3rem;
+  background-color: rgb(255, 254, 235);
+  padding: 0.5rem;
+}
+
 .repo {
   text-decoration: none;
-  color: #000000;
   margin-bottom: 1rem;
   font-size: 1.5rem;
-  font-family: "Space Mono", monospace;
   transition: 200ms;
   background-color: rgb(255, 254, 235);
   padding: 0.2rem;
@@ -98,8 +107,6 @@ a:focus-visible {
 }
 
 .link {
-  font-family: "Space Mono", monospace;
-  color: #000000;
   text-decoration: none;
   border-bottom: 1px solid #000000;
   box-shadow: inset 0 -1px 0 #000000;
@@ -152,7 +159,6 @@ a:focus-visible {
   font-size: 2rem;
   text-decoration: none;
   font-family: "Archivo Black", sans-serif;
-  color: #000000;
 }
 .navbar__logo:hover {
   scale: 1.2;
@@ -175,11 +181,9 @@ a:focus-visible {
   width: 40px;
 }
 .navbar .navbar__container .menu__item {
-  font-family: "Space Mono", monospace;
   font-size: 1.25rem;
   text-decoration: none;
   text-transform: uppercase;
-  color: #000000;
   position: relative;
   padding: 5px;
   cursor: pointer;
