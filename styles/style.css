@@ -27,19 +27,19 @@ li {
 
 .h-1 {
   font-family: "Archivo Black", sans-serif;
-  font-size: 4.5vw;
+  font-size: clamp(1rem, 4.5vw, 4rem);
   text-transform: uppercase;
 }
 
 .h-2 {
   font-family: "Archivo Black", sans-serif;
-  font-size: 2vw;
+  font-size: clamp(1rem, 2vw, 2rem);
   text-transform: uppercase;
 }
 
 .text {
   font-family: "Space Mono", monospace;
-  font-size: 1.2vw;
+  font-size: clamp(1rem, 1.2vw, 1.1rem);
   text-align: justify;
 }
 
@@ -124,12 +124,17 @@ li {
   background-color: rgb(255, 254, 235);
   z-index: 100;
 }
-.navbar a {
+.navbar__logo {
   width: 2rem;
   aspect-ratio: 1;
+  font-size: 2rem;
+  text-decoration: none;
+  font-family: "Archivo Black", sans-serif;
+  color: #000000;
 }
-.navbar a img {
-  width: 100%;
+.navbar__logo:hover {
+  scale: 1.2;
+  transition: 100ms;
 }
 .navbar .navbar__menubtn {
   display: none;
@@ -217,19 +222,22 @@ li {
 .landing .col-1 {
   background-image: url("../assets/images/desktop/block.png");
   background-repeat: no-repeat;
-  background-size: cover;
-  flex-basis: 50vw;
-  padding-left: 9vw;
+  background-size: contain;
+  flex-basis: 620px;
+  padding-left: clamp(10px, 9vw, 140px);
   padding-right: 3vw;
 }
 .landing .col-1 .h-1 {
-  margin-bottom: 3.3vw;
+  margin-top: 12px;
+  margin-bottom: 46px;
 }
 .landing .col-1 .h-2 {
-  margin-bottom: 4.3vw;
+  margin-bottom: 84px;
 }
 .landing .col-1 .text {
-  padding-bottom: 5vw;
+  margin-bottom: 100px;
+  padding: 5px;
+  background-color: rgba(210, 209, 194, 0.555);
 }
 .landing .col-2 img {
   width: 100%;
@@ -354,6 +362,11 @@ li {
   transition: 200ms;
 }
 
+@media (min-width: 1450px) {
+  .landing, .about {
+    margin-inline: calc((100vw - 1450px) / 2);
+  }
+}
 @media (max-width: 800px) {
   .h-1 {
     font-size: 8vw;

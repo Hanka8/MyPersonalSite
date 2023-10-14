@@ -15,9 +15,7 @@
 <body>
 
     <nav class="navbar">
-        <a class="navbar-logo" href="https://www.linkedin.com/in/hana-maru%C5%A1kevi%C4%8Dov%C3%A1-11287127b/">
-            <img src="assets/logos/linkedin.svg" alt="linkedin page">
-        </a>  
+        <a class="navbar__logo" href="#landing" id="topAnchor">HM</a>  
         <button class="navbar__menubtn" id="hamburgerBtn">
             <span class="menubtn__line line-one"></span>
             <span class="menubtn__line line-two"></span>
@@ -30,7 +28,7 @@
         </menu>
     </nav>
 
-    <section class="landing">
+    <section id="landing" class="landing" >
         <div class="landing__col col-1">
             <h1 class="h-1">Hana<br>Maruškevičová</h1>
             <h2 class="h-2">frontend developer</h2>
@@ -115,6 +113,7 @@
     const landing = document.querySelector('.landing');
     const scrollFilling = document.querySelector('.scroll-filling');
     const copyBtns = document.querySelectorAll('.copy');
+    const topAnchor = document.querySelector('#topAnchor');
 
     function copyText(target) {
         let copiedText = target.nextElementSibling.textContent;
@@ -235,6 +234,13 @@
             menu__item[2].classList.add("active"); // Contact
         }
     }
+
+    function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+
+    topAnchor.addEventListener('click', topFunction);
 
     copyBtns.forEach(btn => {
         btn.addEventListener('click', (e) => copyText(e.target));
