@@ -15,7 +15,7 @@ a {
 
 //VARIABLES
 $backgroundColor: rgb(255, 254, 235);
-$backgroundColorLandingText: rgba(210, 209, 194, 0.555);
+$backgroundColorLandingText: rgba(224, 223, 208, 0.555);
 $textPrimaryColor: #000000;
 
 $headersFont: 'Archivo Black',sans-serif;
@@ -235,7 +235,7 @@ li {
     height: calc(100dvh - 76px);
     .col-1 {
         background-image: url("../assets/images/desktop/block.png");
-        background-repeat: no-repeat;
+        background-repeat: round;
         background-size: contain;
         flex-basis: 620px;
         padding-left: clamp(10px, 9vw, 140px); //to stop widescreen from breaking
@@ -245,7 +245,7 @@ li {
             margin-bottom: 46px;
         }
         .h-2 {
-            margin-bottom: 84px;
+            margin-bottom: 57px;
         }
         .text {
             margin-bottom: 100px;
@@ -254,6 +254,7 @@ li {
         }
     }
     .col-2 {
+        flex-shrink: 4;
         & img {
             width: 100%;
         }
@@ -272,7 +273,7 @@ li {
     align-items: center;
     gap: 8vw;
     position: relative;
-    overflow-x: hidden;
+    overflow: hidden;
     z-index: 3;
     & picture {
         display: none;
@@ -387,6 +388,38 @@ li {
     }
 }
 
+@media (max-width: 1350px) {
+    .landing {
+    .col-1 {
+        background-image: url("../assets/images/tablet/block-tablet.png");
+        .h-1 {
+            margin-top: 1vw;
+            margin-bottom: 10%;
+        }
+        .h-2 {
+            margin-bottom: 10%;
+        }
+        .text {
+            
+        }
+    }
+    }
+    .about {
+        flex-direction: column;
+        background-image: none;
+        gap: 8vw;
+        overflow: hidden;
+
+        .about__col {
+            max-width: 433px;
+        }
+
+        & picture {
+            display: block;
+        }
+    }
+}
+
 @media (max-width: $tablet) {
     $paddingInline: 2rem;
     .h-1 {
@@ -496,6 +529,7 @@ li {
             padding-right: $paddingInline;
             background-size: contain;
             flex-basis: content;
+            background-image: url("../assets/images/desktop/block.png");
             .h-1 {
                 margin-top: 3.5vw;
                 margin-bottom: 6vw;
@@ -518,16 +552,4 @@ li {
         }
     }
 
-    .about {
-        flex-direction: column;
-        background-image: none;
-        gap: 8vw;
-        overflow: hidden;
-        .about__col {
-            width: 100%;
-        }
-        & picture {
-            display: block;
-        }
-    }
 }
