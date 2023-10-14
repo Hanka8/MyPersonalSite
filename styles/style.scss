@@ -42,6 +42,10 @@ li {
 a {
     color: $textPrimaryColor;
     text-decoration: none;
+    &:focus {
+        outline: 5px solid #d07242;
+        box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
+    }
 }
 
 //UTILITY

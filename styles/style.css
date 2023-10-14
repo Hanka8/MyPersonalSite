@@ -29,6 +29,10 @@ a {
   color: #000000;
   text-decoration: none;
 }
+a:focus {
+  outline: 5px solid #d07242;
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
 
 .h-1 {
   font-family: "Archivo Black", sans-serif;
