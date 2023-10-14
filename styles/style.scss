@@ -40,6 +40,7 @@ li {
 }
 
 a {
+    color: $textPrimaryColor;
     text-decoration: none;
 }
 
@@ -137,13 +138,12 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem $paddingInline;
+    padding: .5rem $paddingInline;
     border-bottom: 2px solid black;
     background-color: $backgroundColor;
     z-index: 100;
     &__logo {
-       width: 2rem;
-       aspect-ratio: 1;
+       padding: 5px;
        font-size: 2rem;
        text-decoration: none;
        font-family: $headersFont;
