@@ -257,7 +257,7 @@ a {
     height: calc(100dvh - 76px);
     .col-1 {
         background-image: url("../assets/images/desktop/block.png");
-        background-repeat: round;
+        background-repeat: no-repeat;
         background-size: contain;
         flex-basis: 620px;
         padding-left: clamp(10px, 9vw, 140px); //to stop widescreen from breaking
@@ -417,17 +417,12 @@ a {
     .landing {
     .col-1 {
         background-image: url("../assets/images/tablet/block-tablet.png");
+        background-size: cover;
         .h-1 {
-            margin-top: 1vw;
-            margin-bottom: 10%;
+            margin-bottom: 6%;
         }
-        .h-2 {
-            margin-bottom: 10%;
+
         }
-        .text {
-            
-        }
-    }
     }
     .about {
         flex-direction: column;
@@ -441,6 +436,17 @@ a {
 
         & picture {
             display: block;
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .landing {
+        .col-1 {
+            .h-1 {
+                margin-top: 5%;
+                margin-bottom: 9%;
+            }
         }
     }
 }
