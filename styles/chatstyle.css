@@ -1,28 +1,3 @@
-input,
-textarea,
-button,
-select,
-a {
-  -webkit-tap-highlight-color: transparent;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-}
-
-::-moz-selection {
-  background-color: #d07242;
-  color: rgb(255, 254, 235);
-}
-
-::selection {
-  background-color: #d07242;
-  color: rgb(255, 254, 235);
-}
-
 body {
   background-color: rgb(255, 254, 235);
   overflow-y: scroll;
@@ -39,27 +14,29 @@ a {
   color: #000000;
   text-decoration: none;
 }
-a:focus-visible {
+a:focus {
   outline: 5px solid #d07242;
   box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
 
-.h-1 {
+.h-1,
+.h-2 {
   font-family: "Archivo Black", sans-serif;
-  font-size: clamp(1rem, 4.5vw, 4rem);
   text-transform: uppercase;
 }
 
+.h-1 {
+  font-size: clamp(1rem, 4.5vw, 4rem);
+}
+
 .h-2 {
-  font-family: "Archivo Black", sans-serif;
   font-size: clamp(1rem, 2vw, 2rem);
-  text-transform: uppercase;
 }
 
 .text {
   font-family: "Space Mono", monospace;
-  font-size: clamp(1rem, 1.2vw, 1.1rem);
   text-align: justify;
+  font-size: clamp(1rem, 1.2vw, 1.1rem);
 }
 
 .text-outline {
@@ -79,39 +56,32 @@ a:focus-visible {
   text-align: center;
 }
 
-.repo {
-  text-decoration: none;
-  color: #000000;
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
-  font-family: "Space Mono", monospace;
-  transition: 200ms;
-  background-color: rgb(255, 254, 235);
-  padding: 0.2rem;
-  border: 2px solid #000000;
-}
-.repo:hover {
-  box-shadow: inset 0 -2em 0 rgb(0, 0, 0);
-  border-bottom: 2px solid #000000;
-  color: rgb(255, 254, 235);
-  transition: 200ms;
-}
-
+.repo,
 .link {
   font-family: "Space Mono", monospace;
   color: #000000;
   text-decoration: none;
+  transition: 200ms;
+  background-color: rgba(255, 254, 235, 0.123);
+  -webkit-backdrop-filter: blur(1px);
+          backdrop-filter: blur(1px);
+  padding: 0.2rem;
+  border: 2px solid #000000;
+}
+.repo:hover,
+.link:hover {
+  scale: 1.2;
+  transition: 200ms;
+}
+
+.link {
   border-bottom: 1px solid #000000;
   box-shadow: inset 0 -1px 0 #000000;
-  transition: box-shadow 370ms cubic-bezier(0.77, 0, 0.175, 1), color 270ms cubic-bezier(0.77, 0, 0.175, 1);
 }
 .link:hover {
   box-shadow: inset 0 -2em 0 rgb(0, 0, 0);
   border-bottom: 2px solid #000000;
   color: rgb(255, 254, 235);
-}
-.link:visited {
-  color: #d07242;
 }
 
 .horizontal-rule {
@@ -160,6 +130,19 @@ a:focus-visible {
 }
 .navbar .navbar__menubtn {
   display: none;
+}
+.navbar .navbar__menubtn.close .line-one {
+  transform: rotate(45deg);
+  transform-origin: 1px;
+  transition: 150ms ease;
+}
+.navbar .navbar__menubtn.close .line-two {
+  display: none;
+}
+.navbar .navbar__menubtn.close .line-three {
+  transform: rotate(-45deg);
+  transform-origin: 0;
+  transition: 150ms ease;
 }
 .navbar .navbar__container {
   display: flex;
@@ -229,6 +212,28 @@ a:focus-visible {
 }
 .navbar .menu-container {
   gap: 3.75rem;
+  height: 0;
+  flex-direction: column;
+  gap: 0;
+  padding-left: 30px;
+  padding-right: 30px;
+  position: absolute;
+  top: 100%;
+  right: calc(0% + 2.6666666667rem);
+  transition: height 200ms ease, padding 200ms ease, gap 200ms ease;
+}
+.navbar .menu-container.show {
+  height: 15rem;
+  padding: 30px;
+  border: 2px solid #000000;
+  border-top-color: rgb(255, 254, 235);
+  border-top-width: 4px;
+  gap: 1.5rem;
+  background-color: rgb(255, 254, 235);
+  transition: height 200ms ease, padding 200ms ease, gap 200ms ease, background-color 200ms ease;
+}
+.navbar .menu-container.show .menu__item {
+  display: block;
 }
 
 .landing {
@@ -391,7 +396,8 @@ a:focus-visible {
 }
 
 @media (min-width: 1450px) {
-  .landing, .about {
+  .landing,
+  .about {
     margin-inline: calc((100vw - 1450px) / 2);
   }
 }
@@ -480,29 +486,13 @@ a:focus-visible {
     border: none;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space between;
   }
   .navbar .navbar__menubtn .menubtn__line {
     display: block;
     width: 100%;
     height: 3px;
     background-color: #000000;
-  }
-  .navbar .navbar__menubtn .line-one, .navbar .navbar__menubtn .line-three {
-    transition: 100ms ease-in-out;
-  }
-  .navbar .navbar__menubtn.close .line-one {
-    transform: rotate(45deg);
-    transform-origin: 1px;
-    transition: 150ms ease;
-  }
-  .navbar .navbar__menubtn.close .line-two {
-    display: none;
-  }
-  .navbar .navbar__menubtn.close .line-three {
-    transform: rotate(-45deg);
-    transform-origin: 0;
-    transition: 150ms ease;
   }
   .scroll-filling {
     position: absolute;
@@ -544,4 +534,4 @@ a:focus-visible {
   .landing .col-2 img {
     width: 80%;
   }
-}/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=chatstyle.css.map */
