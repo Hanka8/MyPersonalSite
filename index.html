@@ -32,7 +32,7 @@
         <div class="landing__col col-1">
             <h1 class="h-1">Hana<br>Maruškevičová</h1>
             <h2 class="h-2">frontend developer</h2>
-            <p class="text">Welcome to my page! I'm a self-taught web developer with a flair for design. I enjoy building interactive web applications and responsive websites. I have a creative side, and I love crafting visually appealing user interfaces and illustrations with tools like Figma,
+            <p class="text align-left">Welcome to my page! I'm a self-taught web developer with a flair for design. I enjoy building interactive web apps and responsive websites. I have a creative side, and I love crafting visually appealing user interfaces and illustrations with tools like Figma,
             Gimp and Inkscape. I am currently exploring the world of data and backend with MongoDB and Node.js. Feel free to reach out to me at <a class="link" href="https://www.linkedin.com/in/hana-maru%C5%A1kevi%C4%8Dov%C3%A1-11287127b/">LinkedIn</a> for professional networking.
                  </p>
         </div>
@@ -150,7 +150,9 @@
     }
 
     function setSectionHeight(section) {
-        section.style.height = window.innerHeight*1.2 - navbar.offsetHeight + "px";
+        if (window.screen.width > 800) {
+            section.style.height = window.innerHeight * 1.2 - navbar.offsetHeight + "px";
+        }
     }
 
     function setAboutOutline() {
@@ -183,20 +185,23 @@
         const col3 = about.querySelector(".about__col.col-3");
         const ilustration = about.querySelector(".about__col.col-2");
 
-        if (scrollOffset - aboutOffset > 100) {
-            col1.style.position = "relative";
-            col1.style.right = `${scrollOffset - aboutOffset -100}px`;
-            col1.style.top = `${(scrollOffset - aboutOffset - 100)*0.8}px`;
-            col3.style.position = "relative";
-            col3.style.left = `${scrollOffset - aboutOffset - 100}px`;
-            col3.style.top = `${(scrollOffset - aboutOffset - 100)*0.8}px`;
-            ilustration.style.position = "relative";
-            ilustration.style.opacity = `${30 - (scrollOffset - aboutOffset)*0.1}%`;
-            
-        }  else {
-            col1.style.position = "static";
-            col3.style.position = "static";
-            ilustration.style.opacity = "100%";
+        //apply for desktop only 
+        if (window.screen > 800) {
+            if (scrollOffset - aboutOffset > 100) {
+                col1.style.position = "relative";
+                col1.style.right = `${scrollOffset - aboutOffset -100}px`;
+                col1.style.top = `${(scrollOffset - aboutOffset - 100)*0.8}px`;
+                col3.style.position = "relative";
+                col3.style.left = `${scrollOffset - aboutOffset - 100}px`;
+                col3.style.top = `${(scrollOffset - aboutOffset - 100)*0.8}px`;
+                ilustration.style.position = "relative";
+                ilustration.style.opacity = `${30 - (scrollOffset - aboutOffset)*0.1}%`;
+                
+            }  else {
+                col1.style.position = "static";
+                col3.style.position = "static";
+                ilustration.style.opacity = "100%";
+            }
         }
     }
 

@@ -1,6 +1,6 @@
 //VARIABLES
 $backgroundColor: rgb(255, 254, 235);
-$backgroundColorLandingText: rgba(224, 223, 208, 0.555);
+$backgroundColorLandingText: rgba(255, 254, 235, 0.438);
 $textPrimaryColor: #000000;
 $decorationColor: #d07242;
 
@@ -73,7 +73,11 @@ a {
 
 .text {
     font-size: clamp(1rem, 1.2vw, 1.1rem);
-    text-align: justify;
+    text-align: center;
+}
+
+.align-left {
+    text-align: left;
 }
 
 .text-outline {
@@ -454,19 +458,20 @@ a {
 @media (max-width: $tablet) {
     $paddingInline: 2rem;
     .h-1 {
-            font-size: 8vw;
+            font-size: clamp(1rem, 8vw, 5rem);
         }
     
         .h-2 {
-            font-size: 5vw;
+            font-size: clamp(1rem, 5vw, 4rem);
         }
     
         .text {
-            font-size: 2.5vw;
+            text-align: left;
+            font-size: clamp(1rem, 2.5vw, 2rem);
         }
     .navbar {
         top: 0;
-        padding: 1rem $paddingInline;
+        padding: .5rem $paddingInline;
         &.scrolled {
             background-color: $backgroundColor;
             border-bottom: 2px solid $textPrimaryColor;
@@ -547,34 +552,35 @@ a {
     }
 
     .landing {
+        height: fit-content;
         flex-direction: column;
         justify-content: flex-start;
         align-items: stretch;
-        margin-top: 28px;
+        margin-top: 0;
         margin-bottom: 40px;
         margin-inline: 0;
         gap: 28px;
         position: relative;
         .col-1 {
             padding-left: 13vw;
-            padding-right: $paddingInline;
+            padding-right: 3rem;
             background-size: contain;
             flex-basis: content;
-            background-image: url("../assets/images/desktop/block.png");
+            // background-image: url("../assets/images/mobile/block-mobile.png");
             .h-1 {
-                margin-top: 3.5vw;
-                margin-bottom: 6vw;
+                margin-top: 3.5dvw;
+                margin-bottom: 6dvw;
             }
             .h-2 {
-                margin-bottom: 5.25vw;
+                margin-bottom: 6dvw;
             }
             .text {
-                padding-bottom: 24px;
+                padding-bottom: 30px;
             }
         }
         .col-2 {
-            position: absolute;
-            bottom: 28px;
+            position: static;
+            bottom: 0;
             display: flex;
             justify-content: center;
             & img {
@@ -583,4 +589,39 @@ a {
         }
     }
 
+}
+
+@media (max-width: 540px) {
+    .landing {
+        .col-1 {
+            background-image: url("../assets/images/mobile/block-mobile.png");
+            background-size: cover;
+            padding-right: 1rem;
+            .h-1 {
+                    margin-top: 7dvw;
+                    margin-bottom: 8dvw;
+                }
+            
+                .h-2 {
+                    margin-bottom: 6dvw;
+                }
+            
+            .text {
+                padding-bottom: 1rem;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 380px) {
+    .landing {
+        .col-1 {
+            background-image: url("../assets/images/mobile/up-block-mobile.png");
+            background-size: contain;
+            .text {
+                background-color: rgba(122, 122, 122, 0.44);
+            }
+        }
+    }
 }
