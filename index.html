@@ -172,7 +172,7 @@
         const ilustration = about.querySelector(".about__col.col-2");
 
         //apply for desktop only 
-        if (window.screen.width > 800) {
+        if (window.innerWidth > 800) {
             if (scrollOffset - aboutOffset > 100) {
                 col1.style.position = "relative";
                 col1.style.right = `${scrollOffset - aboutOffset -100}px`;
@@ -192,7 +192,7 @@
     }
 
     menuItems.forEach(item => {
-        if (window.screen.width > 800) {
+        if (window.innerWidth > 800) {
             item.addEventListener('click', (e) => {
                 menuItems.forEach(item => item.classList.remove('active'));
                 e.target.classList.add('active');
@@ -270,7 +270,7 @@
     });
 
     document.addEventListener("DOMContentLoaded", () => {
-        if (window.screen.width > 800) {
+        if (window.innerWidth > 800) {
             setSectionHeight(about);
         }
     });
