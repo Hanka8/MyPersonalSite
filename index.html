@@ -137,22 +137,8 @@
     const copyBtns = document.querySelectorAll('.copy');
     const topAnchor = document.querySelector('#topAnchor');
 
-    function copyText(target) {
-        let copiedText = target.nextElementSibling.textContent;
-        navigator.clipboard.writeText(copiedText);
-
-        let copyMessage = target.parentElement.querySelector('.copy-message');
-        copyMessage.style.display = 'block';
-
-        setTimeout(function () {
-            copyMessage.style.display = 'none';
-        }, 2000);
-    }
-
     function setSectionHeight(section) {
-        if (window.screen.width > 800) {
-            section.style.height = window.innerHeight * 1.2 - navbar.offsetHeight + "px";
-        }
+        section.style.height = window.innerHeight * 1.2 - navbar.offsetHeight + "px";
     }
 
     function setAboutOutline() {
@@ -186,7 +172,7 @@
         const ilustration = about.querySelector(".about__col.col-2");
 
         //apply for desktop only 
-        if (window.screen > 800) {
+        if (window.screen.width > 800) {
             if (scrollOffset - aboutOffset > 100) {
                 col1.style.position = "relative";
                 col1.style.right = `${scrollOffset - aboutOffset -100}px`;
@@ -275,7 +261,6 @@
         } else {
             navbar.classList.remove('scrolled');
         }
-        setSectionHeight(about);
         landingScrollChange();
         aboutScrollChange();
         setAboutOutline();
@@ -283,6 +268,13 @@
             showUnderlineOnScroll();
         }
     });
+
+    document.addEventListener("DOMContentLoaded", () => {
+        if (window.screen.width > 800) {
+            setSectionHeight(about);
+        }
+    });
+
 </script>
 <script src="https://kit.fontawesome.com/e8be4dfb60.js" crossorigin="anonymous"></script>
 </body>
