@@ -143,20 +143,6 @@ a {
     height: 2px;
 }
 
-.copy-message {
-    position: absolute;
-    bottom: 35px;
-    left: 15px;
-    background-color: rgba(0, 0, 0, 0.571);
-    backdrop-filter: blur(10px);
-    color: $backgroundColor;
-    padding: 10px;
-    border-radius: 5px;
-    display: none;
-    z-index: 100;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
 .navbar {
     position: sticky;
     top: 0;
@@ -313,8 +299,7 @@ a {
 .projects {
     position: relative;
     z-index: 2;
-    display: grid;
-    place-items: center;
+    text-align: center;
     min-height: 100vh;
     margin-bottom: 5rem;
     .projects__container {
@@ -403,7 +388,7 @@ a {
             justify-content: flex-start;
             align-items: center;
             gap: 2rem;
-            img {
+            .contact__icon {
                 width: 50px;
             }
         }
@@ -615,6 +600,12 @@ a {
     }
 }
 
+@media (max-width: 400px) {
+    .contact .contact__container .container__col .contact__icon {
+        width: 1rem;
+    }
+}
+
 @media (max-width: 380px) {
     .landing {
         .col-1 {
@@ -624,5 +615,11 @@ a {
                 background-color: rgba(122, 122, 122, 0.44);
             }
         }
+    }
+    .contact .contact__container {
+        align-items: center;
+    }
+    .contact .contact__container .container__col .contact__icon {
+        display: none;
     }
 }

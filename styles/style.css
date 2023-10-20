@@ -133,21 +133,6 @@ a:focus-visible {
   height: 2px;
 }
 
-.copy-message {
-  position: absolute;
-  bottom: 35px;
-  left: 15px;
-  background-color: rgba(0, 0, 0, 0.571);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-  color: rgb(255, 254, 235);
-  padding: 10px;
-  border-radius: 5px;
-  display: none;
-  z-index: 100;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
 .navbar {
   position: sticky;
   top: 0;
@@ -302,8 +287,7 @@ a:focus-visible {
 .projects {
   position: relative;
   z-index: 2;
-  display: grid;
-  place-items: center;
+  text-align: center;
   min-height: 100vh;
   margin-bottom: 5rem;
 }
@@ -395,7 +379,7 @@ a:focus-visible {
   align-items: center;
   gap: 2rem;
 }
-.contact .contact__container .container__col img {
+.contact .contact__container .container__col .contact__icon {
   width: 50px;
 }
 
@@ -577,6 +561,11 @@ a:focus-visible {
     margin-bottom: 0;
   }
 }
+@media (max-width: 400px) {
+  .contact .contact__container .container__col .contact__icon {
+    width: 1rem;
+  }
+}
 @media (max-width: 380px) {
   .landing .col-1 {
     background-image: url("../assets/images/mobile/up-block-mobile.png");
@@ -584,5 +573,11 @@ a:focus-visible {
   }
   .landing .col-1 .text {
     background-color: rgba(122, 122, 122, 0.44);
+  }
+  .contact .contact__container {
+    align-items: center;
+  }
+  .contact .contact__container .container__col .contact__icon {
+    display: none;
   }
 }/*# sourceMappingURL=style.css.map */
