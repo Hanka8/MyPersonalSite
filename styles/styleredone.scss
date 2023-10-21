@@ -1,6 +1,6 @@
 //VARIABLES
 $colorBackground: rgb(255, 254, 235);
-$colorBackgtoundLandingText: rgba(255, 254, 235, 0.438);
+$colorBackgroundLandingText: rgba(255, 254, 235, 0.438);
 $colorTextPrimary: #000000;
 $colorDecoration: #d07242;
 $colorBoxShadow: rgba(0, 0, 0, 0.5);
@@ -8,6 +8,10 @@ $fontHeaders: 'Archivo Black', sans-serif;
 $sizeTablet: 800px;
 $sizeWidescreen: 1450px;
 $paddingInline: 4rem;
+
+@media (max-width: 800px) {
+    $paddingInline: 2rem;
+}
 
 /* webkit highligth color */
 input,
@@ -65,17 +69,30 @@ a {
     font-family: $fontHeaders;
     font-size: clamp(1rem, 4.5vw, 4rem);
     text-transform: uppercase;
+
+    @media (max-width: 800px) {
+        font-size: clamp(1rem, 8vw, 5rem);
+    }
 }
 
 .h-2 {
     font-family: $fontHeaders;
     font-size: clamp(1rem, 2vw, 2rem);
     text-transform: uppercase;
+
+    @media (max-width: 800px) {
+        font-size: clamp(1rem, 5vw, 4rem);
+    }
 }
 
 .text {
     font-size: clamp(1rem, 1.2vw, 1.1rem);
     text-align: center;
+
+    @media (max-width: 800px) {
+        text-align: left;
+        font-size: clamp(1rem, 2.5vw, 2rem);
+    }
 }
 
 .align-left {
@@ -201,7 +218,7 @@ a {
                 transform-origin: 0;
                 transition: 150ms ease;
             }
-        }
+         }
     }
 }
 
@@ -321,3 +338,139 @@ a {
         transition: width 0.3s ease-in-out;
     }
 }
+
+/* Landing */
+.landing {
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8.33%;
+    margin-inline: $paddingInline;
+    height: calc(100dvh - 76px);
+
+    @media (min-width: 1450px) {
+        margin-inline: calc((100vw - 1450px)/2);
+    }
+
+    @media (max-width: 800px) {
+        height: fit-content;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+        margin-top: 0;
+        margin-bottom: 40px;
+        margin-inline: 0;
+        gap: 28px;
+        position: relative;
+    }
+}
+
+.landing__col1 {
+    background-image: url("../assets/images/desktop/block.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    flex-basis: 620px;
+    padding-left: clamp(10px, 9vw, 140px);
+    padding-right: 3vw;
+
+    @media (max-width: 1350px) {
+        background-image: url("../assets/images/tablet/block-tablet.png");
+        background-size: cover;
+    }
+
+    @media (max-width: 800px) {
+        padding-left: 13vw;
+        padding-right: 3rem;
+        background-size: contain;
+        flex-basis: content;
+    }
+
+    @media (max-width: 540px) {
+        background-image: url("../assets/images/mobile/block-mobile.png");
+        background-size: cover;
+        padding-right: 1rem;
+    }
+
+    @media (max-width: 380px) {
+        background-image: url("../assets/images/mobile/up-block-mobile.png");
+        background-size: contain;
+    }
+
+    .h-1 {
+        margin-top: 12px;
+        margin-bottom: 46px;
+
+        @media (max-width: 1350px) {
+            margin-bottom: 6%;
+        }
+
+        @media (max-width: 1000px) {
+            margin-top: 5%;
+            margin-bottom: 9%;
+        }
+
+        @media (max-width: 800px) {
+            margin-top: 3.5dvw;
+            margin-bottom: 6dvw;
+        }
+
+        @media (max-width: 540px) {
+            margin-top: 7dvw;
+            margin-bottom: 8dvw;
+        }
+    }
+
+    .h-2 {
+        margin-bottom: 57px;
+
+        @media (max-width: 800px) {
+            margin-bottom: 6dvw;
+        }
+
+        @media (max-width: 540px) {
+            margin-bottom: 6dvw;
+        }
+    }
+
+    .text {
+        margin-bottom: 100px;
+        padding: 5px;
+        background-color: $colorBackgroundLandingText;
+
+        @media (max-width: 800px) {
+            padding-bottom: 30px;
+        }
+
+        @media (max-width: 540px) {
+            padding-bottom: 1rem;
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 380px) {
+            background-color: rgba(122, 122, 122, 0.44);
+        }
+    }
+}
+
+.landing__col2 {
+    flex-shrink: 4;
+
+    @media (max-width: 800px) {
+        position: static;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    & img {
+        width: 100%;
+
+        @media (max-width: 800px) {
+            width: 80%;
+        }
+    }
+}
+
+/* About */

@@ -412,15 +412,15 @@ a {
 
 @media (max-width: 1350px) {
     .landing {
-    .col-1 {
-        background-image: url("../assets/images/tablet/block-tablet.png");
-        background-size: cover;
-        .h-1 {
-            margin-bottom: 6%;
-        }
+        .col-1 {
+            background-image: url("../assets/images/tablet/block-tablet.png");
+            background-size: cover;
+            .h-1 {
+                margin-bottom: 6%;
+            }
 
+            }
         }
-    }
     .about {
         flex-direction: column;
         background-image: none;
