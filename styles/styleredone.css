@@ -587,4 +587,69 @@ a:focus-visible {
 
 .project4 {
   background-image: url("../assets/images/desktop/project4.png");
+}
+
+/* Contact */
+.contact {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  position: relative;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.socials {
+  display: flex;
+  gap: 2rem;
+  align-self: center;
+}
+
+.contact__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+@media (max-width: 380px) {
+  .contact__container {
+    align-items: center;
+  }
+}
+
+.contact__anchor {
+  padding: 15px;
+}
+.contact__anchor:hover .contact__link {
+  box-shadow: inset 0 -2em 0 rgb(0, 0, 0);
+  border-bottom: 2px solid #000000;
+  color: rgb(255, 254, 235);
+}
+.contact__anchor:hover .contact__icon {
+  cursor: pointer;
+  scale: 1.2;
+  transition: 200ms;
+}
+
+.contact__icon {
+  width: 50px;
+}
+@media (max-width: 400px) {
+  .contact__icon {
+    width: 1rem;
+  }
+}
+@media (max-width: 380px) {
+  .contact__icon {
+    display: none;
+  }
+}
+
+.container__col {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
 }/*# sourceMappingURL=styleredone.css.map */
