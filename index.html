@@ -13,26 +13,25 @@
 </head>
 
 <body>
-
     <nav class="navbar">
         <a class="navbar__logo" href="#landing" id="topAnchor">HM</a>  
         <button class="navbar__menubtn" id="hamburgerBtn">
-            <span class="menubtn__line line-one"></span>
-            <span class="menubtn__line line-two"></span>
-            <span class="menubtn__line line-three"></span>
+            <span class="navbar__line line-one"></span>
+            <span class="navbar__line line-two"></span>
+            <span class="navbar__line line-three"></span>
         </button>
         <menu class="navbar__container menu-container">
-            <li><a class="menu__item" href="#about">about me</a></li>
-            <li><a class="menu__item" href="#projects">projects</a></li>
-            <li><a class="menu__item" href="#contact">contact</a></li>
+            <li><a class="navbar__item" href="#about">about me</a></li>
+            <li><a class="navbar__item" href="#projects">projects</a></li>
+            <li><a class="navbar__item" href="#contact">contact</a></li>
         </menu>
     </nav>
 
     <section id="landing" class="landing" >
         <div class="landing__col1">
-            <h1 class="h-1">Hana<br>Maruškevičová</h1>
-            <h2 class="h-2">frontend developer</h2>
-            <p class="text align-left">Welcome to my page! I'm a self-taught web developer with a flair for design. I enjoy building interactive web apps and responsive websites. I have a creative side, and I love crafting visually appealing user interfaces and illustrations with tools like Figma,
+            <h1 class="landing__h1 h-1">Hana<br>Maruškevičová</h1>
+            <h2 class="landing__h2 h-2">frontend developer</h2>
+            <p class="landing__p text align-left">Welcome to my page! I'm a self-taught web developer with a flair for design. I enjoy building interactive web apps and responsive websites. I have a creative side, and I love crafting visually appealing user interfaces and illustrations with tools like Figma,
             Gimp and Inkscape. I am currently exploring the world of data and backend with MongoDB and Node.js. Feel free to reach out to me at <a class="link" href="https://www.linkedin.com/in/hana-maru%C5%A1kevi%C4%8Dov%C3%A1-11287127b/">LinkedIn</a> for professional networking.
                  </p>
         </div>
@@ -51,7 +50,7 @@
         well. For now, I'm populating my <a class="link" href="https://github.com/Hanka8">GitHub</a> with various experiments.</p>
         <picture class="about__illustration">
             <source media="(max-width: 1350px)" srcset="assets/images/tablet/about.png">
-            <img class="about__col col-2" src="assets/images/desktop/about.png" alt="">
+            <img class="col-2" src="assets/images/desktop/about.png" alt="">
         </picture>
         <p class="about__col col-3 text">By day, I navigate the labyrinth of government bureaucracy, armed with patience and soft skills. But when the workday
         is over, I dive into the world of computers, a passion that's been with me since the days of Doom on my trusty old
@@ -62,25 +61,25 @@
     <section id="projects" class="projects">
         <h2 class="h-2">projects</h2>
         <div class="projects__container">
-            <div class="container_col">
-                <a class="repo" href="https://github.com/Hanka8/Nu-pogodi">&lt;code&gt;</a>
-                <a class="col__project project1" href="https://hanka8.github.io/Nu-pogodi/"></a>
-                <a class="text" href="https://hanka8.github.io/Nu-pogodi/">Enjoy the pure JavaScript browser version of a cult minigame!</a>
+            <div class="projects__col">
+                <a class="projects__repo" href="https://github.com/Hanka8/Nu-pogodi">&lt;code&gt;</a>
+                <a class="projects__project project1" href="https://hanka8.github.io/Nu-pogodi/"></a>
+                <a class="projects__live text" href="https://hanka8.github.io/Nu-pogodi/">Enjoy the pure JavaScript browser version of a cult minigame!</a>
             </div>
-            <div class="container_col">
-                <a class="repo" href="https://github.com/Maacaa0/31-hana-maca-final">&lt;code&gt;</a>
-                <a class="col__project project2" href="https://maacaa0.github.io/31-hana-maca-final/"></a>
-                <a class="text" href="https://maacaa0.github.io/31-hana-maca-final/">Website of the 31. CBRN regiment. <span class="italics">beta version</span></a>
+            <div class="projects__col">
+                <a class="projects__repo" href="https://github.com/Maacaa0/31-hana-maca-final">&lt;code&gt;</a>
+                <a class="projects__project project2" href="https://maacaa0.github.io/31-hana-maca-final/"></a>
+                <a class="projects__live text" href="https://maacaa0.github.io/31-hana-maca-final/">Website of the 31. CBRN regiment. <span class="italics">beta version</span></a>
             </div>
-            <div class="container_col">
-                <a class="repo" href="https://github.com/Hanka8/FM-Password-generator">&lt;code&gt;</a>
-                <a class="col__project project3" href="https://hanka8.github.io/FM-Password-generator/"></a>
-                <a class="text" href="https://hanka8.github.io/FM-Password-generator/">Password generator.</a>
+            <div class="projects__col">
+                <a class="projects__repo" href="https://github.com/Hanka8/FM-Password-generator">&lt;code&gt;</a>
+                <a class="projects__project project3" href="https://hanka8.github.io/FM-Password-generator/"></a>
+                <a class="projects__live text" href="https://hanka8.github.io/FM-Password-generator/">Password generator.</a>
             </div>
-            <div class="container_col">
-                <a class="repo" href="https://github.com/Hanka8/NelaMarus">&lt;code&gt;</a>
-                <a class="col__project project4" href="https://hanka8.github.io/NelaMarus/"></a>
-                <a class="text" href="https://hanka8.github.io/NelaMarus/">Portfolio of my artist sister.</a>
+            <div class="projects__col">
+                <a class="projects__repo" href="https://github.com/Hanka8/NelaMarus">&lt;code&gt;</a>
+                <a class="projects__project project4" href="https://hanka8.github.io/NelaMarus/"></a>
+                <a class="projects__live text" href="https://hanka8.github.io/NelaMarus/">Portfolio of my artist sister.</a>
             </div>
         </div>
         <p class="text">check out my <a class="link" href="https://github.com/Hanka8">GitHub</a> for more...</p>
@@ -106,7 +105,7 @@
     </footer>
 
 <script>
-    const menuItems = document.querySelectorAll('.menu__item');
+    const menuItems = document.querySelectorAll('.navbar__item');
     const hamburgerBtn = document.querySelector('#hamburgerBtn');
     const menuContainer = document.querySelector('.menu-container');
     const navbar = document.querySelector('.navbar');
@@ -199,7 +198,7 @@
     });
 
     // underlining menu items on scroll
-    const menu__item = document.querySelectorAll(".menu__item");
+    const navbar__item = document.querySelectorAll(".navbar__item");
 
     const scrollPositions = {
         about: document.querySelector("#about").offsetTop,
@@ -215,17 +214,17 @@
         const scrollTop = scrollContainer().scrollTop;
         const windowHeight = window.innerHeight;
 
-        menu__item.forEach((li) => {
+        navbar__item.forEach((li) => {
             li.classList.remove("active");
         });
         if (scrollTop < scrollPositions.about - windowHeight / 2) {
             // You're at the top of the page
         } else if (scrollTop < (scrollPositions.projects)) {
-            menu__item[0].classList.add("active"); // About
+            navbar__item[0].classList.add("active"); // About
         } else if (scrollTop < (scrollPositions.contact - 200)) {
-            menu__item[1].classList.add("active"); // Projects
+            navbar__item[1].classList.add("active"); // Projects
         } else {
-            menu__item[2].classList.add("active"); // Contact
+            navbar__item[2].classList.add("active"); // Contact
         }
     }
 
@@ -257,6 +256,5 @@
     });
 
 </script>
-<script src="https://kit.fontawesome.com/e8be4dfb60.js" crossorigin="anonymous"></script>
 </body>
 </html>

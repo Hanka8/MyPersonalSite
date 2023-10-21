@@ -112,23 +112,6 @@ a {
     font-style: italic;
 }
 
-.repo {
-    text-decoration: none;
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-    transition: 200ms;
-    background-color: $colorBackground;
-    padding: .2rem;
-    border: 2px solid $colorTextPrimary;
-
-    &:hover {
-        box-shadow: inset 0 -2em 0 rgb(0, 0, 0);
-        border-bottom: 2px solid $colorTextPrimary;
-        color: $colorBackground;
-        transition: 200ms;
-    }
-}
-
 .link {
     text-decoration: none;
     border-bottom: 1px solid $colorTextPrimary;
@@ -169,13 +152,12 @@ a {
         top: 0;
         padding: .5rem $paddingInline;
         
-            &.scrolled {
-                background-color: $colorBackground;
-                border-bottom: 2px solid $colorTextPrimary;
-                transition: background-color 200ms ease, border-bottom 200ms ease;
-            }
-
+        &.scrolled {
+            background-color: $colorBackground;
+            border-bottom: 2px solid $colorTextPrimary;
+            transition: background-color 200ms ease, border-bottom 200ms ease;
         }
+    }
 }
 
 .navbar__logo {
@@ -188,7 +170,6 @@ a {
         scale: 1.2;
         transition: 100ms;
     }
-
 }
 
 .navbar__menubtn {
@@ -227,7 +208,7 @@ a {
     }
 }
 
-.menubtn__line {
+.navbar__line {
     @media (max-width: 800px) {
         display: block;
         width: 100%;
@@ -236,8 +217,7 @@ a {
 
         .line-one, .line-three {
                 transition: 100ms ease-in-out;
-            }
-        
+        }
     }
 }
 
@@ -268,22 +248,22 @@ a {
 
         &.show {
             height: 15rem;
-                padding: 30px;
-                border: 2px solid $colorTextPrimary;
-                border-top-color: $colorBackground;
-                border-top-width: 4px;
-                gap: 1.5rem;
-                background-color: $colorBackground;
-                transition: height 200ms ease, padding 200ms ease, gap 200ms ease, background-color 200ms ease;
-            
-                .menu__item {
-                    display: block;
-                }
+            padding: 30px;
+            border: 2px solid $colorTextPrimary;
+            border-top-color: $colorBackground;
+            border-top-width: 4px;
+            gap: 1.5rem;
+            background-color: $colorBackground;
+            transition: height 200ms ease, padding 200ms ease, gap 200ms ease, background-color 200ms ease;
+        
+            .navbar__item {
+                display: block;
+            }
         }
     }
 }
 
-.menu__item {
+.navbar__item {
     font-size: calc(20rem/16);
     text-decoration: none;
     text-transform: uppercase;
@@ -402,60 +382,60 @@ a {
         background-image: url("../assets/images/mobile/up-block-mobile.png");
         background-size: contain;
     }
+}
 
-    .h-1 {
-        margin-top: 12px;
-        margin-bottom: 46px;
+.landing__h1 {
+    margin-top: 12px;
+    margin-bottom: 46px;
 
-        @media (max-width: 1350px) {
-            margin-bottom: 6%;
-        }
-
-        @media (max-width: 1000px) {
-            margin-top: 5%;
-            margin-bottom: 9%;
-        }
-
-        @media (max-width: 800px) {
-            margin-top: 3.5dvw;
-            margin-bottom: 6dvw;
-        }
-
-        @media (max-width: 540px) {
-            margin-top: 7dvw;
-            margin-bottom: 8dvw;
-        }
+    @media (max-width: 1350px) {
+        margin-bottom: 6%;
     }
 
-    .h-2 {
-        margin-bottom: 57px;
-
-        @media (max-width: 800px) {
-            margin-bottom: 6dvw;
-        }
-
-        @media (max-width: 540px) {
-            margin-bottom: 6dvw;
-        }
+    @media (max-width: 1000px) {
+        margin-top: 5%;
+        margin-bottom: 9%;
     }
 
-    .text {
-        margin-bottom: 100px;
-        padding: 5px;
-        background-color: $colorBackgroundLandingText;
+    @media (max-width: 800px) {
+        margin-top: 3.5dvw;
+        margin-bottom: 6dvw;
+    }
 
-        @media (max-width: 800px) {
-            padding-bottom: 30px;
-        }
+    @media (max-width: 540px) {
+        margin-top: 7dvw;
+        margin-bottom: 8dvw;
+    }
+}
 
-        @media (max-width: 540px) {
-            padding-bottom: 1rem;
-            margin-bottom: 0;
-        }
+.landing__h2 {
+    margin-bottom: 57px;
 
-        @media (max-width: 380px) {
-            background-color: rgba(122, 122, 122, 0.44);
-        }
+    @media (max-width: 800px) {
+        margin-bottom: 6dvw;
+    }
+
+    @media (max-width: 540px) {
+        margin-bottom: 6dvw;
+    }
+}
+
+.landing__p {
+    margin-bottom: 100px;
+    padding: 5px;
+    background-color: $colorBackgroundLandingText;
+
+    @media (max-width: 800px) {
+        padding-bottom: 30px;
+    }
+
+    @media (max-width: 540px) {
+        padding-bottom: 1rem;
+        margin-bottom: 0;
+    }
+
+    @media (max-width: 380px) {
+        background-color: rgba(122, 122, 122, 0.44);
     }
 }
 
@@ -468,13 +448,13 @@ a {
         display: flex;
         justify-content: center;
     }
+}
 
-    & img {
-        width: 100%;
+.landing__img {
+    width: 100%;
 
-        @media (max-width: 800px) {
-            width: 80%;
-        }
+    @media (max-width: 800px) {
+        width: 80%;
     }
 }
 
@@ -543,7 +523,7 @@ a {
     }
 }
 
-.container_col {
+.projects__col {
     justify-self: center;
     width: fit-content;
     display: flex;
@@ -554,16 +534,33 @@ a {
     background-image: url("../assets/images/desktop/simplex.png");
     background-repeat: no-repeat;
     background-size: cover;
+}
 
-    .text {
-        margin-top: 1rem;
-        padding: .5rem;
-        background-color: $colorBackground;
-        width: 330px;
+.projects__live {
+    margin-top: 1rem;
+    padding: .5rem;
+    background-color: $colorBackground;
+    width: 330px;
+}
+
+.projects__repo {
+    text-decoration: none;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    transition: 200ms;
+    background-color: $colorBackground;
+    padding: .2rem;
+    border: 2px solid $colorTextPrimary;
+
+    &:hover {
+        box-shadow: inset 0 -2em 0 rgb(0, 0, 0);
+        border-bottom: 2px solid $colorTextPrimary;
+        color: $colorBackground;
+        transition: 200ms;
     }
 }
 
-.col__project {
+.projects__project {
     display: block;
     background-size: cover;
     background-repeat: no-repeat;
