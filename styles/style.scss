@@ -35,7 +35,6 @@ a {
 html {
     font-family: 'Space Mono', monospace;
     color: $textPrimaryColor;
-    overflow-x: hidden;
 }
 
 body {
@@ -308,6 +307,7 @@ a {
         gap: 4rem;
         flex-direction: column;
         padding: 2rem;
+        align-items: center;
         .container_col {
             display: flex;
             justify-content: center;
@@ -334,6 +334,7 @@ a {
                 margin-top: 1rem;
                 padding: .5rem;
                 background-color: $backgroundColor;
+                width: 330px;
             }
             .project1 {
                 background-image: url("../assets/images/desktop/project1.png");

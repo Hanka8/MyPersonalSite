@@ -26,7 +26,6 @@ a {
 html {
   font-family: "Space Mono", monospace;
   color: #000000;
-  overflow-x: hidden;
 }
 
 body {
@@ -297,6 +296,7 @@ a:focus-visible {
   gap: 4rem;
   flex-direction: column;
   padding: 2rem;
+  align-items: center;
 }
 .projects .projects__container .container_col {
   display: flex;
@@ -325,6 +325,7 @@ a:focus-visible {
   margin-top: 1rem;
   padding: 0.5rem;
   background-color: rgb(255, 254, 235);
+  width: 330px;
 }
 .projects .projects__container .container_col .project1 {
   background-image: url("../assets/images/desktop/project1.png");
