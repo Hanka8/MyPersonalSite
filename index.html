@@ -49,7 +49,7 @@
         discovering backend architecture with Node.js - Express + MongoDB, and I plan to delve into frontend frameworks like React/Vue. I'm drawn to
         frontend development simply because I enjoy solving the visual aspects of a project, and I'd like to explore design as
         well. For now, I'm populating my <a class="link" href="https://github.com/Hanka8">GitHub</a> with various experiments.</p>
-        <picture>
+        <picture class="about__illustration">
             <source media="(max-width: 1350px)" srcset="assets/images/tablet/about.png">
             <img class="about__col col-2" src="assets/images/desktop/about.png" alt="">
         </picture>
@@ -134,8 +134,8 @@
             let rgb3 = 235 - window.scrollY / 20 < 214 ? 207 : 235 - window.scrollY / 20;
             document.querySelector(".scroll-filling").style.backgroundColor = `rgb(${rgb1}, ${rgb2}, ${rgb3})`;
             let percent = window.scrollY > 810 ? 100 : window.scrollY / 810 * 100;
-            document.querySelector(".landing__col.col-1").style.opacity = `${100 - percent}%`;
-            document.querySelector(".landing__col.col-2").style.opacity = `${100 - percent}%`;
+            document.querySelector(".landing__col1").style.opacity = `${100 - percent}%`;
+            document.querySelector(".landing__col2").style.opacity = `${100 - percent}%`;
  
         } else {
            document.querySelector(".landing__img").style.filter = "none";

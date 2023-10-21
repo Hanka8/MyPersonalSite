@@ -101,6 +101,11 @@ a {
 
 .scroll-filling {
     height: 100vh;
+
+    @media (max-width: 800px) {
+        position: absolute;
+        display: none;
+    }
 }
 
 .italics {
@@ -474,3 +479,46 @@ a {
 }
 
 /* About */
+.about {
+    background-color: $colorBackground;
+    background-image: url("../assets/images/desktop/about.png");
+    background-position: center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    padding: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8vw;
+    position: relative;
+    overflow: hidden;
+    z-index: 3;
+
+    @media (min-width: 1450px) {
+        margin-inline: calc((100vw - 1450px)/2);
+    }
+
+    @media (max-width: 1350px) {
+        flex-direction: column;
+        background-image: none;
+        gap: 8vw;
+        overflow: hidden;
+    }
+}
+
+.about__illustration {
+    display: none;
+
+    @media (max-width: 1350px) {
+        display: block;
+    }
+}
+
+.about__col {
+    background-color: rgba(255, 254, 235, 0.7);
+
+    @media (max-width: 1350px) {
+        max-width: 433px;
+    }
+}
+
