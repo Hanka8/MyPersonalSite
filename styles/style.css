@@ -291,14 +291,16 @@ a:focus-visible {
   margin-bottom: 5rem;
 }
 .projects .projects__container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(390px, 400px));
   justify-content: center;
-  gap: 4rem;
-  flex-direction: column;
+  gap: 40px;
   padding: 2rem;
-  align-items: center;
 }
 .projects .projects__container .container_col {
+  justify-self: center;
+  width: -moz-fit-content;
+  width: fit-content;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -414,6 +416,9 @@ a:focus-visible {
   .landing .col-1 .h-1 {
     margin-top: 5%;
     margin-bottom: 9%;
+  }
+  .projects .projects__container {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 @media (max-width: 800px) {
