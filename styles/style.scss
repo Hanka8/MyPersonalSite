@@ -404,7 +404,7 @@ a {
 
 // ************* RESPONSIBILITY **************
 
-@media (min-width: $widescreen) {
+@media (min-width: 1450px) {
     .landing, .about {
         margin-inline: calc((100vw - 1450px)/2);
     }
@@ -451,7 +451,7 @@ a {
     }
 }
 
-@media (max-width: $tablet) {
+@media (max-width: 800px) {
     $paddingInline: 2rem;
     .h-1 {
             font-size: clamp(1rem, 8vw, 5rem);
