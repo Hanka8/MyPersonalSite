@@ -44,7 +44,7 @@
     <div class="scroll-filling"></div>
 
     <div id="about" class="about">
-        <p class="about__col col-1 text">I've been diving into web development for the past two years. I feel fairly confident with HTML, CSS and JavaScript. Currently, I'm
+        <p class="about__col col-1 text align-center">I've been diving into web development for the past two years. I feel fairly confident with HTML, CSS and JavaScript. Currently, I'm
         discovering backend architecture with Node.js - Express + MongoDB, and I plan to delve into frontend frameworks like React/Vue. I'm drawn to
         frontend development simply because I enjoy solving the visual aspects of a project, and I'd like to explore design as
         well. For now, I'm populating my <a class="link" href="https://github.com/Hanka8">GitHub</a> with various experiments.</p>
@@ -52,7 +52,7 @@
             <source media="(max-width: 1350px)" srcset="assets/images/tablet/about.png">
             <img class="col-2" src="assets/images/desktop/about.png" alt="">
         </picture>
-        <p class="about__col col-3 text">By day, I navigate the labyrinth of government bureaucracy, armed with patience and soft skills. But when the workday
+        <p class="about__col col-3 text align-center">By day, I navigate the labyrinth of government bureaucracy, armed with patience and soft skills. But when the workday
         is over, I dive into the world of computers, a passion that's been with me since the days of Doom on my trusty old
         Pentium. I find the virtual realm to be the ultimate canvas for human creativity and intelligence. Join me as I embark
         on a journey to combine my skills and passion, aiming to carve out a career as a junior frontend developer.</p>
@@ -82,7 +82,7 @@
                 <a class="projects__live text" href="https://hanka8.github.io/NelaMarus/">Portfolio of my artist sister.</a>
             </div>
         </div>
-        <p class="text">check out my <a class="link" href="https://github.com/Hanka8">GitHub</a> for more...</p>
+        <p class="projects__text text">check out my <a class="link" href="https://github.com/Hanka8">GitHub</a> for more...</p>
     </section>
 
     <hr class="horizontal-rule">
@@ -116,7 +116,6 @@
     const copyBtns = document.querySelectorAll('.copy');
     const topAnchor = document.querySelector('#topAnchor');
 
-    // přidej eventlistener na widtch change
     function setSectionHeight(section) {
         section.style.height = window.innerHeight * 1.2 - navbar.offsetHeight + "px";
     }
@@ -218,7 +217,7 @@
             li.classList.remove("active");
         });
         if (scrollTop < scrollPositions.about - windowHeight / 2) {
-            // You're at the top of the page
+        // You're at the top of the page
         } else if (scrollTop < (scrollPositions.projects)) {
             navbar__item[0].classList.add("active"); // About
         } else if (scrollTop < (scrollPositions.contact - 200)) {
@@ -250,6 +249,12 @@
     });
 
     document.addEventListener("DOMContentLoaded", () => {
+        if (window.innerWidth > 1340) {
+            setSectionHeight(about);
+        }
+    });
+
+    document.addEventListener("resize", () => {
         if (window.innerWidth > 1340) {
             setSectionHeight(about);
         }

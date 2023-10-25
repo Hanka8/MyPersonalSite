@@ -77,13 +77,15 @@ a:focus-visible {
 
 .text {
   font-size: clamp(1rem, 1.2vw, 1.1rem);
-  text-align: center;
 }
 @media (max-width: 800px) {
   .text {
-    text-align: left;
     font-size: clamp(1rem, 2.5vw, 2rem);
   }
+}
+
+.align-center {
+  text-align: center;
 }
 
 .align-left {
@@ -592,6 +594,15 @@ a:focus-visible {
 
 .project4 {
   background-image: url("../assets/images/desktop/project4.png");
+}
+
+.projects__text {
+  text-align: left;
+}
+@media (max-width: 50em) {
+  .projects__text {
+    text-align: center;
+  }
 }
 
 /* Contact */
