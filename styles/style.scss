@@ -443,6 +443,7 @@ a {
 
 .landing__col2 {
     flex-shrink: 4;
+    flex-basis: 21%;
 
     @media (max-width: 800px) {
         position: static;
