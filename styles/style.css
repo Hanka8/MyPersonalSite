@@ -570,7 +570,8 @@ a:focus-visible {
 .projects__project {
   display: block;
   background-size: cover;
-  background-repeat: no-repeat;
+  background-position: center;
+  background-repeat: repeat;
   width: 330px;
   max-width: 70vw;
   aspect-ratio: 1.5;
@@ -582,19 +583,19 @@ a:focus-visible {
 }
 
 .project1 {
-  background-image: url("../assets/images/desktop/project1.png");
+  background-image: url("../assets/images/desktop/1.png");
 }
 
 .project2 {
-  background-image: url("../assets/images/desktop/project2.png");
+  background-image: url("../assets/images/desktop/2.png");
 }
 
 .project3 {
-  background-image: url("../assets/images/desktop/project3.png");
+  background-image: url("../assets/images/desktop/3.png");
 }
 
 .project4 {
-  background-image: url("../assets/images/desktop/project4.png");
+  background-image: url("../assets/images/desktop/4.png");
 }
 
 .projects__text {
