@@ -492,11 +492,17 @@ a:focus-visible {
 
 .about__illustration {
   display: none;
+  width: 393px;
+  height: 63px;
 }
 @media (max-width: 1350px) {
   .about__illustration {
     display: block;
   }
+}
+
+.about__image {
+  width: 100%;
 }
 
 .about__col {
