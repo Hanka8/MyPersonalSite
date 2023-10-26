@@ -151,7 +151,6 @@ a:focus-visible {
     transition: background-color 200ms ease, border-bottom 200ms ease;
   }
 }
-
 .navbar__logo {
   padding: 5px;
   font-size: 2rem;
@@ -170,7 +169,6 @@ a:focus-visible {
   .navbar__menubtn {
     -webkit-backdrop-filter: none;
             backdrop-filter: none;
-    display: block;
     background-color: transparent;
     background-size: contain;
     width: 40px;

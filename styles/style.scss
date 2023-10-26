@@ -160,6 +160,10 @@ a {
             transition: background-color 200ms ease, border-bottom 200ms ease;
         }
     }
+
+    @media (max-width: 1000px) and (max-height:575px) {
+        
+    }
 }
 
 .navbar__logo {
@@ -179,7 +183,6 @@ a {
 
     @media (max-width: 800px) {
         backdrop-filter: none;
-        display: block;
         background-color: transparent;
         background-size: contain;
         width: 40px;
