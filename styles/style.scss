@@ -1,6 +1,6 @@
 //VARIABLES
 $colorBackground: rgb(255, 254, 235);
-$colorBackgroundLandingText: rgba(255, 254, 235, 0.438);
+$colorBackgroundLandingText: rgba(255, 254, 235, 0.5);
 $colorTextPrimary: #000000;
 $colorDecoration: #d07242;
 $colorBoxShadow: rgba(0, 0, 0, 0.5);
@@ -38,7 +38,7 @@ a {
 
 /* Global styles */
 html {
-    font-family: 'Space Mono', monospace;
+    font-family: 'Fira Code', monospace;
     color: $colorTextPrimary;
 }
 
@@ -72,7 +72,6 @@ a {
 
     @media (max-width: 620px) {
         font-size: 2rem;
-        
     }
 }
 
@@ -153,6 +152,10 @@ a {
         border: none;
         background: transparent;
         padding: 1.5rem;
+    }
+
+    @media (max-width: 620px) {
+        padding: .3rem 1.5rem;
     }
 }
 
@@ -420,7 +423,7 @@ a {
 
     @media (max-width: 460px) {
         margin-top: 1rem;
-        margin-bottom: 1.3rem;
+        margin-bottom: 1.8rem;
     }
 }
 
