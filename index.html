@@ -36,7 +36,7 @@
                  </p>
         </div>
         <picture class="landing__col2">
-            <source media="(max-width: 800px)" srcset="assets/images/tablet/me-fs8.png">
+            <source media="(max-width: 920px)" srcset="assets/images/tablet/me-fs8.png">
             <img class="landing__img" src="assets/images/desktop/me-fs8.png" alt="me"                                           >
         </picture>   
     </section>
@@ -147,7 +147,7 @@
         let projectsOffset = projects.offsetTop - navbar.offsetHeight/2;
         const col1 = about.querySelector(".about__col.col-1");
         const col3 = about.querySelector(".about__col.col-3");
-        const ilustration = about.querySelector(".about__col.col-2");
+        const ilustration = about.querySelector(".about__image.col-2");
 
         if (scrollOffset - aboutOffset > 100) {
             col1.style.position = "relative";
