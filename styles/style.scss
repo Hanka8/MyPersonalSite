@@ -106,7 +106,7 @@ a {
 .scroll-filling {
     height: 100vh;
 
-    @media (width <= 920px), (width <= 1000px) and (height <= 630px) {
+    @media (width <= 920px), (width <= 1000px) and (height <= 630px), (height <=520px) {
         position: absolute;
         display: none;
     }
@@ -152,7 +152,7 @@ a {
     background-color: $color-background;
     z-index: 100;
 
-    @media (width <= 1000px) and (height <= 630px) {
+    @media (width <= 1000px) and (height <= 630px), (height <=520px) {
         max-width: fit-content;
         left: 100%;
         border: none;
@@ -176,7 +176,7 @@ a {
         transition: 100ms;
     }
 
-    @media (width <= 1000px) and (height <= 630px) {
+    @media (width <= 1000px) and (height <= 630px), (height <=520px) {
         display: none;
     }
 }
@@ -184,7 +184,7 @@ a {
 .navbar__menubtn {
     display: none;  
 
-    @media (width <= 800px), (width <= 1000px) and (height <= 630px) {
+    @media (width <= 800px), (width <= 1000px) and (height <= 630px), (height <=520px) {
         backdrop-filter: none;
         background-color: transparent;
         background-size: contain;
@@ -217,7 +217,7 @@ a {
 }
 
 .navbar__line {
-    @media (width <= 800px), (width <= 1000px) and (height <= 630px) {
+    @media (width <= 800px), (width <= 1000px) and (height <= 630px), (height <=520px) {
         display: block;
         width: 100%;
         height: 3px;
@@ -235,7 +235,7 @@ a {
     gap: 2rem;
     transition: 100ms;
 
-    @media (width <= 800px), (width <= 1000px) and (height <= 630px) {
+    @media (width <= 800px), (width <= 1000px) and (height <= 630px), (height <=520px) {
         gap: 1rem;
     }
 }
@@ -243,7 +243,7 @@ a {
 .menu-container {
     gap: calc(60rem / 16);
 
-    @media (width <= 800px), (width <= 1000px) and (height <= 630px) {
+    @media (width <= 800px), (width <= 1000px) and (height <= 630px), (height <=520px) {
         height: 0;
         flex-direction: column;
         gap: 0;
@@ -269,7 +269,7 @@ a {
         }
     }
 
-    @media (width <= 800px), (width <= 1000px) and (height <= 630px) {
+    @media (width <= 800px), (width <= 1000px) and (height <= 630px), (height <=520px) {
         right: -300px;
 
         &.show {
@@ -290,7 +290,7 @@ a {
     cursor: pointer;
     border: 2px solid transparent;
 
-    @media (width <= 800px), (width <= 1000px) and (height <= 630px) {
+    @media (width <= 800px), (width <= 1000px) and (height <= 630px), (height <= 520px) {
         display: none;
     }
 
@@ -357,7 +357,7 @@ a {
         margin-inline: calc((100vw - 1450px) / 2);
     }
 
-    @media (width <= 1000px) and (height <= 630px) {
+    @media (width <= 1000px) and (height <= 630px), (height <=520px) {
         height: fit-content;
         position: relative;
         margin-inline: 2rem;
@@ -393,6 +393,10 @@ a {
         flex-basis: content;
         max-width: 620px;
         align-self: center;
+    }
+
+    @media (width <= 920px ) and (height <= 630px) {
+        margin-top: 0;
     }
 
     @media (width <= 620px) {
@@ -437,7 +441,7 @@ a {
     }
 
     @media (width <=420px) {
-        margin-top: 5vw;
+        margin-top: 7vw;
         margin-bottom: 7vw;
     }
 }
@@ -559,7 +563,7 @@ a {
     display: grid;
     grid-template-columns: repeat(2, minmax(390px, 400px));
     justify-content: center;
-    gap: 40px;
+    gap: 3rem;
     padding: 2rem;
     overflow-x: hidden;
 
