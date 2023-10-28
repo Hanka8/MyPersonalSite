@@ -1,16 +1,14 @@
-//VARIABLES
-$colorBackground: rgb(255, 254, 235);
-$colorBackgroundLandingText: rgba(255, 254, 235, 0.5);
+// VARIABLES
+$color-background: rgb(255, 254, 235);
+$color-background-landing-text: rgba(255, 254, 235, 0.5);
 $colorTextPrimary: #000000;
-$colorDecoration: #d07242;
-$colorBoxShadow: rgba(0, 0, 0, 0.5);
-$fontHeaders: 'Archivo Black', sans-serif;
-$sizeTablet: 800px;
-$sizeWidescreen: 1450px;
-$paddingInline: 4rem;
+$color-decoration: #d07242;
+$color-box-shadow: rgba(0, 0, 0, 0.5);
+$font-headers: 'Archivo Black', sans-serif;
+$padding-inline: 4rem;
 
 @media (max-width: 800px) {
-    $paddingInline: 2rem;
+    $padding-inline: 2rem;
 }
 
 /* webkit highligth color */
@@ -19,7 +17,7 @@ textarea,
 button,
 select,
 a {
-    -webkit-tap-highlight-color: $colorDecoration;
+    -webkit-tap-highlight-color: $color-decoration;
 }
 
 /* Reset default styles */
@@ -32,18 +30,18 @@ a {
 
 /* Text selection style */
 ::selection {
-    background-color: $colorDecoration;
-    color: $colorBackground;
+    background-color: $color-decoration;
+    color: $color-background;
 }
 
 /* Global styles */
 html {
     font-family: 'Fira Code', monospace;
-    color: $colorTextPrimary;
+    color: $color-text-primary;
 }
 
 body {
-    background-color: $colorBackground;
+    background-color: $color-background;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
     height: 100%;
@@ -55,18 +53,18 @@ li {
 }
 
 a {
-    color: $colorTextPrimary;
+    color: $color-text-primary;
     text-decoration: none;
 
     &:focus-visible {
-        outline: 5px solid $colorDecoration;
-        box-shadow: 5px 5px 5px 5px $colorBoxShadow;
+        outline: 5px solid $color-decoration;
+        box-shadow: 5px 5px 5px 5px $color-box-shadow;
     }
 }
 
 /* Modificators */
 .h-1 {
-    font-family: $fontHeaders;
+    font-family: $font-headers;
     text-transform: uppercase;
     font-size: 2.5rem;
 
@@ -76,7 +74,7 @@ a {
 }
 
 .h-2 {
-    font-family: $fontHeaders;
+    font-family: $font-headers;
     text-transform: uppercase;
     font-size: 1.5rem;
 
@@ -112,25 +110,25 @@ a {
 
 .link {
     text-decoration: none;
-    border-bottom: 1px solid $colorTextPrimary;
-    box-shadow: inset 0 -1px 0 $colorTextPrimary;
+    border-bottom: 1px solid $color-text-primary;
+    box-shadow: inset 0 -1px 0 $color-text-primary;
     transition: box-shadow 370ms cubic-bezier(0.77, 0, 0.175, 1), color 270ms cubic-bezier(0.77, 0, 0.175, 1);
 
     &:hover {
         box-shadow: inset 0 -2em 0 rgb(0, 0, 0);
-        border-bottom: 2px solid $colorTextPrimary;
-        color: $colorBackground;
+        border-bottom: 2px solid $color-text-primary;
+        color: $color-background;
     }
 
     &:visited {
-        color: $colorDecoration;
+        color: $color-decoration;
     }
 }
 
 .horizontal-rule {
     width: 100%;
-    color: $colorTextPrimary;
-    background-color: $colorTextPrimary;
+    color: $color-text-primary;
+    background-color: $color-text-primary;
     height: 2px;
 }
 
@@ -141,9 +139,9 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: .5rem $paddingInline;
-    border-bottom: 2px solid $colorTextPrimary;
-    background-color: $colorBackground;
+    padding: .5rem $padding-inline;
+    border-bottom: 2px solid $color-text-primary;
+    background-color: $color-background;
     z-index: 100;
 
     @media (max-width: 1000px) and (max-height: 630px) {
@@ -163,7 +161,7 @@ a {
     padding: 5px;
     font-size: 2rem;
     text-decoration: none;
-    font-family: $fontHeaders;
+    font-family: $font-headers;
 
     &:hover {
         scale: 1.2;
@@ -215,7 +213,7 @@ a {
         display: block;
         width: 100%;
         height: 3px;
-        background-color: $colorTextPrimary;
+        background-color: $color-text-primary;
 
         .line-one, .line-three {
                 transition: 100ms ease-in-out;
@@ -245,16 +243,16 @@ a {
         padding-right: 30px;
         position: absolute;
         top: calc(100%);
-        right: calc(0% + ($paddingInline/1.5));
+        right: calc(0% + ($padding-inline/1.5));
         transition: height 200ms ease, padding 200ms ease, gap 200ms ease;
 
         &.show {
             height: 15rem;
             padding: 30px;
-            border: 2px solid $colorTextPrimary;
-            border-top-color: $colorBackground;
+            border: 2px solid $color-text-primary;
+            border-top-color: $color-background;
             border-top-width: 4px;
-            background-color: $colorBackground;
+            background-color: $color-background;
             transition: height 200ms ease, padding 200ms ease, gap 200ms ease, background-color 200ms ease;
         
             .navbar__item {
@@ -268,8 +266,8 @@ a {
 
         &.show {
             right: 0;
-            border: 2px solid $colorTextPrimary;
-            border-right-color: $colorBackground;
+            border: 2px solid $color-text-primary;
+            border-right-color: $color-background;
             transition: background-color 200ms ease, right 200ms ease;
         }
     }
@@ -293,7 +291,7 @@ a {
         position: absolute;
         width: 0;
         height: 2px;
-        background-color: $colorTextPrimary;
+        background-color: $color-text-primary;
         left: 0;
         bottom: 0;
         transition: width 0.3s ease-in-out;
@@ -304,21 +302,21 @@ a {
         position: absolute;
         width: 100%;
         height: 2px;
-        background-color: $colorTextPrimary;
+        background-color: $color-text-primary;
         left: 0;
         bottom: 0;
         transition: width 0.3s ease-in-out;
     }
 
     &.active {
-        border: 2px solid $colorTextPrimary;
+        border: 2px solid $color-text-primary;
     }
 
     &.active::after {
         content: "";
         position: absolute;
         width: 0;
-        background-color: $colorTextPrimary;
+        background-color: $color-text-primary;
         left: 0;
         bottom: 0;
         transition: none;
@@ -329,7 +327,7 @@ a {
         position: absolute;
         width: 0;
         height: 100%;
-        background-color: $colorTextPrimary;
+        background-color: $color-text-primary;
         left: 0;
         bottom: 0;
         transition: width 0.3s ease-in-out;
@@ -344,7 +342,7 @@ a {
     justify-content: center;
     align-items: center;
     gap: 8.33%;
-    margin-inline: $paddingInline;
+    margin-inline: $padding-inline;
     height: calc(100dvh - 76px);
 
     @media (min-width: 1450px) {
@@ -442,7 +440,7 @@ a {
 .landing__p {
     padding: 5px;
     padding-bottom: 1rem;
-    background-color: $colorBackgroundLandingText;
+    background-color: $color-background-landing-text;
 
     @media (max-width: 920px) {
         padding-bottom: 30px;
@@ -483,7 +481,7 @@ a {
 
 /* About */
 .about {
-    background-color: $colorBackground;
+    background-color: $color-background;
     background-image: url("../assets/images/desktop/about-fs8.png");
     background-position: center;
     background-size: 50%;
@@ -568,7 +566,7 @@ a {
 .projects__live {
     margin-top: 1rem;
     padding: .5rem;
-    background-color: $colorBackground;
+    background-color: $color-background;
     width: 330px;
 }
 
@@ -577,14 +575,14 @@ a {
     margin-bottom: 1rem;
     font-size: 1.5rem;
     transition: 200ms;
-    background-color: $colorBackground;
+    background-color: $color-background;
     padding: .2rem;
-    border: 2px solid $colorTextPrimary;
+    border: 2px solid $color-text-primary;
 
     &:hover {
         box-shadow: inset 0 -2em 0 rgb(0, 0, 0);
-        border-bottom: 2px solid $colorTextPrimary;
-        color: $colorBackground;
+        border-bottom: 2px solid $color-text-primary;
+        color: $color-background;
         transition: 200ms;
     }
 }
@@ -662,8 +660,8 @@ a {
 
     &:hover .contact__link {
         box-shadow: inset 0 -2em 0 rgb(0, 0, 0);
-        border-bottom: 2px solid $colorTextPrimary;
-        color: $colorBackground;
+        border-bottom: 2px solid $color-text-primary;
+        color: $color-background;
     }
 
     &:hover .contact__icon {
