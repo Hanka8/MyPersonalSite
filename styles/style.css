@@ -561,7 +561,7 @@ a:focus-visible {
 }
 @media (width <= 1350px) {
   .about__col {
-    max-width: 433px;
+    max-width: 75%;
   }
 }
 
