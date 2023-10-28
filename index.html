@@ -237,8 +237,7 @@
         } else {
             navbar.classList.remove('scrolled');
         }
-        if ((window.innerWidth > 1000) && (window.innerHeight > 800)) {
-            console.log("hello");
+        if ((window.innerWidth > 920) && (window.innerHeight > 520)) {
             landingScrollChange();
             aboutScrollChange();
         }
@@ -249,13 +248,13 @@
     });
 
     document.addEventListener("DOMContentLoaded", () => {
-        if ((window.innerWidth > 1340) && (window.innerHeight > 800)) {
+        if ((window.innerWidth > 920) && (window.innerHeight > 520)) {
             setSectionHeight(about);
         }
     });
 
     document.addEventListener("resize", () => {
-        if ((window.innerWidth > 1340) && (window.innerHeight > 800)) {
+        if ((window.innerWidth > 920) && (window.innerHeight > 520)) {
             setSectionHeight(about);
         }
     });
