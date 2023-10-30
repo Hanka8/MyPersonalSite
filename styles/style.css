@@ -89,6 +89,24 @@ a:focus-visible {
   font-size: 1rem;
 }
 
+.repo-description {
+  color: #000;
+  background-color: rgb(255, 254, 235);
+  padding: 0.2rem;
+  border: 2px solid #000;
+  transition: 200ms;
+}
+.repo-description:hover {
+  box-shadow: inset 0 -150px 0 rgb(0, 0, 0);
+  border-bottom: 2px solid #000;
+  color: rgb(255, 254, 235);
+  transition: 300ms;
+}
+
+.tag {
+  color: #d07242;
+}
+
 .align-center {
   text-align: center;
 }
