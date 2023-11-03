@@ -58,12 +58,12 @@ a:focus-visible {
   text-transform: uppercase;
   font-size: 2.5rem;
 }
-@media (min-width: 620px) {
+@media (min-width: 38.75em) {
   .h-1 {
     font-size: 2rem;
   }
 }
-@media (min-width: 420px) {
+@media (min-width: 26.25em) {
   .h-1 {
     font-size: 1.5rem;
   }
@@ -74,12 +74,12 @@ a:focus-visible {
   text-transform: uppercase;
   font-size: 1.5rem;
 }
-@media (min-width: 620px) {
+@media (min-width: 38.75em) {
   .h-2 {
     font-size: 1.25rem;
   }
 }
-@media (min-width: 420px) {
+@media (min-width: 26.25em) {
   .h-2 {
     font-size: 1rem;
   }
@@ -118,7 +118,7 @@ a:focus-visible {
 .scroll-filling {
   height: 100vh;
 }
-@media (min-width: 920px), (min-width: 1000px) and (min-height: 630px), (min-height: 520px) {
+@media (min-width: 57.5em), (min-width: 62.5em) and (min-height: 39.375em), (min-height: 32.5em) {
   .scroll-filling {
     position: absolute;
     display: none;
@@ -148,7 +148,7 @@ a:focus-visible {
   width: 100%;
   color: #000;
   background-color: #000;
-  height: 2px;
+  height: 0.125rem;
 }
 
 /* Navbar */
@@ -163,7 +163,7 @@ a:focus-visible {
   background-color: rgb(255, 254, 235);
   z-index: 100;
 }
-@media (min-width: 1000px) and (min-height: 630px), (min-height: 520px) {
+@media (min-width: 62.5em) and (min-height: 39.375em), (min-height: 32.5em) {
   .navbar {
     max-width: -moz-fit-content;
     max-width: fit-content;
@@ -173,14 +173,14 @@ a:focus-visible {
     padding: 1.5rem;
   }
 }
-@media (min-width: 620px) {
+@media (min-width: 38.75em) {
   .navbar {
     padding: 0.3rem 1.5rem;
   }
 }
 
 .navbar__logo {
-  padding: 5px;
+  padding: 0.3125rem;
   font-size: 2rem;
   text-decoration: none;
   font-family: "Archivo Black", sans-serif;
@@ -189,7 +189,7 @@ a:focus-visible {
   scale: 1.2;
   transition: 100ms;
 }
-@media (min-width: 1000px) and (min-height: 630px), (min-height: 520px) {
+@media (min-width: 62.5em) and (min-height: 39.375em), (min-height: 32.5em) {
   .navbar__logo {
     display: none;
   }
@@ -198,14 +198,14 @@ a:focus-visible {
 .navbar__menubtn {
   display: none;
 }
-@media (min-width: 800px), (min-width: 1000px) and (min-height: 630px), (min-height: 520px) {
+@media (min-width: 50em), (min-width: 62.5em) and (min-height: 39.375em), (min-height: 32.5em) {
   .navbar__menubtn {
     -webkit-backdrop-filter: none;
             backdrop-filter: none;
     background-color: transparent;
     background-size: contain;
-    width: 40px;
-    height: 30px;
+    width: 2.5rem;
+    height: 1.875rem;
     cursor: pointer;
     border: none;
     display: flex;
@@ -227,11 +227,11 @@ a:focus-visible {
   }
 }
 
-@media (min-width: 800px), (min-width: 1000px) and (min-height: 630px), (min-height: 520px) {
+@media (min-width: 50em), (min-width: 62.5em) and (min-height: 39.375em), (min-height: 32.5em) {
   .navbar__line {
     display: block;
     width: 100%;
-    height: 3px;
+    height: 0.1875rem;
     background-color: #000;
   }
   .navbar__line .line-one, .navbar__line .line-three {
@@ -245,7 +245,7 @@ a:focus-visible {
   gap: 2rem;
   transition: 100ms;
 }
-@media (min-width: 800px), (min-width: 1000px) and (min-height: 630px), (min-height: 520px) {
+@media (min-width: 50em), (min-width: 62.5em) and (min-height: 39.375em), (min-height: 32.5em) {
   .navbar__container {
     gap: 1rem;
   }
@@ -254,13 +254,13 @@ a:focus-visible {
 .menu-container {
   gap: 3.75rem;
 }
-@media (min-width: 800px), (min-width: 1000px) and (min-height: 630px), (min-height: 520px) {
+@media (min-width: 50em), (min-width: 62.5em) and (min-height: 39.375em), (min-height: 32.5em) {
   .menu-container {
     height: 0;
     flex-direction: column;
     gap: 0;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 1.875rem;
+    padding-right: 1.875rem;
     position: absolute;
     top: 100%;
     right: calc(0% + 2.6666666667rem);
@@ -268,7 +268,7 @@ a:focus-visible {
   }
   .menu-container.show {
     height: 15rem;
-    padding: 30px;
+    padding: 1.875rem;
     border: 2px solid #000;
     border-top-color: rgb(255, 254, 235);
     border-top-width: 4px;
@@ -279,7 +279,7 @@ a:focus-visible {
     display: block;
   }
 }
-@media (min-width: 800px), (min-width: 1000px) and (min-height: 630px), (min-height: 520px) {
+@media (min-width: 50em), (min-width: 62.5em) and (min-height: 39.375em), (min-height: 32.5em) {
   .menu-container {
     right: -300px;
   }
@@ -296,11 +296,11 @@ a:focus-visible {
   text-decoration: none;
   text-transform: uppercase;
   position: relative;
-  padding: 5px;
+  padding: 0.3125rem;
   cursor: pointer;
   border: 2px solid transparent;
 }
-@media (min-width: 800px), (min-width: 1000px) and (min-height: 630px), (min-height: 520px) {
+@media (min-width: 50em), (min-width: 62.5em) and (min-height: 39.375em), (min-height: 32.5em) {
   .navbar__item {
     display: none;
   }
@@ -309,7 +309,7 @@ a:focus-visible {
   content: "";
   position: absolute;
   width: 0;
-  height: 2px;
+  height: 0.125rem;
   background-color: #000;
   left: 0;
   bottom: 0;
@@ -319,7 +319,7 @@ a:focus-visible {
   content: "";
   position: absolute;
   width: 100%;
-  height: 2px;
+  height: 0.125rem;
   background-color: #000;
   left: 0;
   bottom: 0;
@@ -357,14 +357,14 @@ a:focus-visible {
   align-items: center;
   gap: 8.33%;
   margin-inline: 4rem;
-  height: calc(100dvh - 76px);
+  height: calc(100dvh - 4.75rem);
 }
-@media (max-width: 1450px) {
+@media (max-width: 90.625em) {
   .landing {
     margin-inline: calc((100vw - 1450px) / 2);
   }
 }
-@media (min-width: 1000px) and (min-height: 630px), (min-height: 520px) {
+@media (min-width: 62.5em) and (min-height: 39.375em), (min-height: 32.5em) {
   .landing {
     height: -moz-fit-content;
     height: fit-content;
@@ -373,7 +373,7 @@ a:focus-visible {
     top: -50px;
   }
 }
-@media (min-width: 920px) {
+@media (min-width: 57.5em) {
   .landing {
     height: -moz-fit-content;
     height: fit-content;
@@ -381,7 +381,7 @@ a:focus-visible {
     justify-content: flex-start;
     align-items: stretch;
     margin-top: 0;
-    margin-bottom: 40px;
+    margin-bottom: 2.5rem;
     margin-inline: 0;
     gap: 28px;
     position: relative;
@@ -397,9 +397,9 @@ a:focus-visible {
   padding-right: 3vw;
   flex-shrink: 0;
 }
-@media (min-width: 920px) {
+@media (min-width: 57.5em) {
   .landing__col1 {
-    padding-left: 95px;
+    padding-left: 5.9375rem;
     padding-right: 3rem;
     margin-top: 3rem;
     flex-basis: content;
@@ -407,12 +407,12 @@ a:focus-visible {
     align-self: center;
   }
 }
-@media (min-width: 920px) and (min-height: 530px) {
+@media (min-width: 57.5em) and (min-height: 33.125em) {
   .landing__col1 {
     margin-top: 0;
   }
 }
-@media (min-width: 620px) {
+@media (min-width: 38.75em) {
   .landing__col1 {
     background-image: url("../assets/images/tablet/block-tablet-2.png");
     background-size: cover;
@@ -421,24 +421,24 @@ a:focus-visible {
     aspect-ratio: 1;
   }
 }
-@media (min-width: 520px) {
+@media (min-width: 32.5em) {
   .landing__col1 {
     aspect-ratio: 0.8;
     background-size: contain;
   }
 }
-@media (min-width: 460px) {
+@media (min-width: 28.75em) {
   .landing__col1 {
     background-image: url("../assets/images/mobile/block-mobile-1.png");
     aspect-ratio: 0.6;
   }
 }
-@media (min-width: 410px) {
+@media (min-width: 25.625em) {
   .landing__col1 {
     background-image: url("../assets/images/mobile/block-mobile-2.png");
   }
 }
-@media (min-width: 362px) {
+@media (min-width: 22.625em) {
   .landing__col1 {
     background-image: url("../assets/images/mobile/block-mobile-3.png");
   }
@@ -448,19 +448,19 @@ a:focus-visible {
   margin-top: 1.5rem;
   margin-bottom: 2.1rem;
 }
-@media (min-width: 1000px) and (min-height: 630px) {
+@media (min-width: 62.5em) and (min-height: 39.375em) {
   .landing__h1 {
     margin-top: 1rem;
     margin-bottom: 2.5rem;
   }
 }
-@media (min-width: 460px) {
+@media (min-width: 28.75em) {
   .landing__h1 {
     margin-top: 1rem;
     margin-bottom: 1.8rem;
   }
 }
-@media (min-width: 420px) {
+@media (min-width: 26.25em) {
   .landing__h1 {
     margin-top: 7vw;
     margin-bottom: 7vw;
@@ -470,33 +470,33 @@ a:focus-visible {
 .landing__h2 {
   margin-bottom: 1.8rem;
 }
-@media (min-width: 1000px) and (min-height: 630px) {
+@media (min-width: 62.5em) and (min-height: 39.375em) {
   .landing__h2 {
     margin-bottom: 2rem;
   }
 }
-@media (min-width: 460px) {
+@media (min-width: 28.75em) {
   .landing__h2 {
     margin-bottom: 2.5rem;
   }
 }
 
 .landing__p {
-  padding: 5px;
+  padding: 0.3125rem;
   padding-bottom: 1rem;
   background-color: rgba(255, 254, 235, 0.5);
 }
-@media (min-width: 920px) {
+@media (min-width: 57.5em) {
   .landing__p {
-    padding-bottom: 30px;
+    padding-bottom: 1.875rem;
   }
 }
-@media (min-width: 620px) {
+@media (min-width: 38.75em) {
   .landing__p {
     max-width: 426px;
   }
 }
-@media (min-width: 460px) {
+@media (min-width: 28.75em) {
   .landing__p {
     max-width: 356px;
   }
@@ -505,7 +505,7 @@ a:focus-visible {
 .landing__col2 {
   flex-basis: 19%;
 }
-@media (min-width: 920px) {
+@media (min-width: 57.5em) {
   .landing__col2 {
     max-width: 320px;
     align-self: center;
@@ -514,7 +514,7 @@ a:focus-visible {
     justify-content: center;
   }
 }
-@media (min-width: 520px) {
+@media (min-width: 32.5em) {
   .landing__col2 {
     max-width: 100vw;
     transform: translateX(0);
@@ -525,12 +525,12 @@ a:focus-visible {
 .landing__img {
   width: 100%;
 }
-@media (min-width: 800px) {
+@media (min-width: 50em) {
   .landing__img {
     width: 80%;
   }
 }
-@media (min-width: 520px) {
+@media (min-width: 32.5em) {
   .landing__img {
     width: 100%;
   }
@@ -552,12 +552,12 @@ a:focus-visible {
   overflow: hidden;
   z-index: 3;
 }
-@media (max-width: 1450px) {
+@media (max-width: 90.625em) {
   .about {
     margin-inline: calc((100vw - 1450px) / 2);
   }
 }
-@media (min-width: 1350px) {
+@media (min-width: 84.375em) {
   .about {
     flex-direction: column;
     background-image: none;
@@ -565,7 +565,7 @@ a:focus-visible {
     overflow: hidden;
   }
 }
-@media (min-width: 700px) {
+@media (min-width: 43.75em) {
   .about {
     padding: 3rem;
     padding-top: 0;
@@ -583,7 +583,7 @@ a:focus-visible {
   transform: translate(-50%);
   z-index: 0;
 }
-@media (min-width: 1350px) {
+@media (min-width: 84.375em) {
   .about__heading {
     position: static;
     transform: none;
@@ -592,10 +592,10 @@ a:focus-visible {
 
 .about__illustration {
   display: none;
-  width: 393px;
-  height: 63px;
+  width: 24.5625rem;
+  height: 3.9375rem;
 }
-@media (min-width: 1350px) {
+@media (min-width: 84.375em) {
   .about__illustration {
     display: block;
   }
@@ -608,12 +608,12 @@ a:focus-visible {
 .about__col {
   background-color: rgba(255, 254, 235, 0.7);
 }
-@media (min-width: 1350px) {
+@media (min-width: 84.375em) {
   .about__col {
     max-width: 75%;
   }
 }
-@media (min-width: 700px) {
+@media (min-width: 43.75em) {
   .about__col {
     max-width: 100%;
   }
@@ -636,7 +636,7 @@ a:focus-visible {
   padding: 2rem;
   overflow-x: hidden;
 }
-@media (min-width: 1000px) {
+@media (min-width: 62.5em) {
   .projects__container {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -660,7 +660,7 @@ a:focus-visible {
   margin-top: 1rem;
   padding: 0.5rem;
   background-color: rgb(255, 254, 235);
-  width: 330px;
+  width: 20.625rem;
 }
 
 .projects__repo {
@@ -684,7 +684,7 @@ a:focus-visible {
   background-size: cover;
   background-position: center;
   background-repeat: repeat;
-  width: 330px;
+  width: 20.625rem;
   max-width: 70vw;
   aspect-ratio: 1.5;
   transition: 200ms;
@@ -742,28 +742,28 @@ a:focus-visible {
   justify-content: center;
   align-items: flex-start;
 }
-@media (min-width: 380px) {
+@media (min-width: 23.75em) {
   .contact__container {
     align-items: center;
   }
 }
 
 .contact__icon {
-  width: 50px;
+  width: 3.125rem;
 }
-@media (min-width: 400px) {
+@media (min-width: 25em) {
   .contact__icon {
     width: 1rem;
   }
 }
-@media (min-width: 380px) {
+@media (min-width: 23.75em) {
   .contact__icon {
     display: none;
   }
 }
 
 .contact__anchor {
-  padding: 15px;
+  padding: 0.9375rem;
 }
 .contact__anchor:hover .contact__link {
   box-shadow: inset 0 -2em 0 rgb(0, 0, 0);
@@ -782,4 +782,5 @@ a:focus-visible {
   justify-content: flex-start;
   align-items: center;
   gap: 2rem;
-}/*# sourceMappingURL=style.css.map */
+}
+/*# sourceMappingURL=processed-style.css.map */
