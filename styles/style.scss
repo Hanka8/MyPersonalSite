@@ -559,6 +559,21 @@ a {
     }
 }
 
+.about__heading {
+    position: absolute;
+    inset: 0;
+    width: fit-content;
+    height: fit-content;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 0;
+
+    @media (min-width:1350px) {
+        position: static;
+        transform: none;
+    }
+}
+
 .about__illustration {
     display: none;
     width: 393px;
