@@ -44,6 +44,7 @@ html {
 body {
     background-color: $color-background;
     overflow-y: scroll;
+    overflow-x: hidden;
     scroll-snap-type: y mandatory;
     height: 100%;
     scroll-behavior: smooth;
