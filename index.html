@@ -46,7 +46,7 @@
     <div class="scroll-filling"></div>
 
     <div id="about" class="about">
-        <h2 class="h-2">about me</h2>
+        <h2 class="about__heading h-2">about me</h2>
         <p class="about__col col-1 text align-center">I've been diving into web development for the past two years. I feel fairly confident with HTML, CSS and JavaScript. Currently, I'm
         discovering backend architecture with Node.js - Express + MongoDB, and I plan to delve into frontend frameworks like React/Vue. I'm drawn to
         frontend development simply because I enjoy solving the visual aspects of a project, and I'd like to explore design as
@@ -138,15 +138,15 @@
   
     function landingScrollChange() {
         if (window.scrollY > 20) {
-            let rgb1 = 255 - window.scrollY / 20 < 234 ? 227 : 255 - window.scrollY / 20;
-            let rgb2 = 254 - window.scrollY / 20 < 233 ? 226 : 254 - window.scrollY / 20;
-            let rgb3 = 235 - window.scrollY / 20 < 214 ? 207 : 235 - window.scrollY / 20;
+            let rgb1 = 255 - window.scrollY / 20 < 234 ? 227 : 255 - window.scrollY / 20; //color change
+            let rgb2 = 254 - window.scrollY / 20 < 233 ? 226 : 254 - window.scrollY / 20; //color change
+            let rgb3 = 235 - window.scrollY / 20 < 214 ? 207 : 235 - window.scrollY / 20; //color change
             document.querySelector(".scroll-filling").style.backgroundColor = `rgb(${rgb1}, ${rgb2}, ${rgb3})`;
             let percent = window.scrollY > 810 ? 100 : window.scrollY / 810 * 100;
-            document.querySelector(".landing__col1").style.opacity = `${100 - percent}%`;
-            document.querySelector(".landing__col2").style.opacity = `${100 - percent}%`;
+            document.querySelector(".landing__col1").style.opacity = `${100 - percent}%`; //opacity change
+            document.querySelector(".landing__col2").style.opacity = `${100 - percent}%`; //opacity change
  
-        } else {
+        } else { //reset
            document.querySelector(".landing__img").style.filter = "none";
            document.querySelector(".scroll-filling").style.backgroundColor = "rgb(255, 254, 235)";
         }
@@ -177,7 +177,7 @@
         }
     }
 
-    menuItems.forEach(item => {
+    function underlineMenuItem(item) {
         if (window.innerWidth > 800) {
             item.addEventListener('click', (e) => {
                 menuItems.forEach(item => item.classList.remove('active'));
@@ -189,9 +189,9 @@
                 menuContainer.classList.remove('show');
             });
         }
-    });
+    }
 
-    hamburgerBtn.addEventListener('click', () => {
+    function animateHamburgerButton() {
         hamburgerBtn.classList.toggle('close');
         menuContainer.classList.toggle('show');
         if (document.querySelector("#hamburgerBtn").classList.contains("close")) {
@@ -201,7 +201,13 @@
             hamburgerBtn.style.transform = "rotate(180deg)";
             hamburgerBtn.style.transition = "transform 200ms ease-in-out";
         }
+    }
+
+    menuItems.forEach(item => {
+        underlineMenuItem(item);
     });
+
+    hamburgerBtn.addEventListener('click', animateHamburgerButton);
 
     // underlining menu items on scroll
     const navbar__item = document.querySelectorAll(".navbar__item");

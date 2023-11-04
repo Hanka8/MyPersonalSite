@@ -4,5 +4,9 @@
     "stylelint": "^15.11.0",
     "stylelint-config-standard": "^34.0.0",
     "stylelint-config-standard-scss": "^11.0.0"
+  },
+  "dependencies": {
+    "postcss": "^8.4.31",
+    "postcss-em-media-query": "^4.1.0"
   }
 }
