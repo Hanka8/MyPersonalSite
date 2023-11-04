@@ -592,11 +592,11 @@ a {
     background-color: rgb(255 254 235 / 70%);
 
     @media (max-width: 1350px) {
-        max-width: 75%;
+        max-width: 75vw;
     }
 
     @media (max-width: 700px) {
-        max-width: 100%;
+        max-width: 90vw;
     }
 }
 

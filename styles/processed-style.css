@@ -610,12 +610,12 @@ a:focus-visible {
 }
 @media (max-width: 84.375em) {
   .about__col {
-    max-width: 75%;
+    max-width: 75vw;
   }
 }
 @media (max-width: 43.75em) {
   .about__col {
-    max-width: 100%;
+    max-width: 90vw;
   }
 }
 
