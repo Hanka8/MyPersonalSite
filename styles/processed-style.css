@@ -30,6 +30,11 @@ html {
   font-family: "Fira Code", monospace;
   color: #000;
 }
+@media (max-width: 25em) {
+  html {
+    overflow-x: hidden;
+  }
+}
 
 body {
   background-color: rgb(255, 254, 235);

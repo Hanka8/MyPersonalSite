@@ -40,6 +40,9 @@ html {
     font-family: 'Fira Code', monospace;
     color: $color-text-primary;
 
+    @media (max-width: 400px) {
+        overflow-x: hidden;
+    }
 }
 
 body {
