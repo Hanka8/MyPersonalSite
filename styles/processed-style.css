@@ -280,6 +280,11 @@ a:focus-visible {
     display: block;
   }
 }
+@media (max-width: 50em) {
+  .menu-container {
+    right: 0;
+  }
+}
 @media (min-width: 62.5em) and (max-height: 39.375em), (max-height: 32.5em) {
   .menu-container {
     right: -300px;
