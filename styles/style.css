@@ -93,6 +93,7 @@ a:focus-visible {
 
 .text {
   font-size: 1rem;
+  line-height: 1.4;
 }
 
 .repo-description {
@@ -489,7 +490,7 @@ a:focus-visible {
 }
 @media (max-width: 460px) {
   .landing__h2 {
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.5rem;
   }
 }
 
