@@ -563,6 +563,8 @@ a:focus-visible {
   position: relative;
   overflow: hidden;
   z-index: 3;
+  max-width: 1660px;
+  margin-inline: auto;
 }
 @media (max-width: 1450px) {
   .about {
