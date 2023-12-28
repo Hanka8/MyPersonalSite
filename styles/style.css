@@ -93,7 +93,6 @@ a:focus-visible {
 
 .text {
   font-size: 1rem;
-  line-height: 1.4;
 }
 
 .repo-description {
@@ -490,7 +489,7 @@ a:focus-visible {
 }
 @media (max-width: 460px) {
   .landing__h2 {
-    margin-bottom: 1.5rem;
+    margin-bottom: 2.5rem;
   }
 }
 
@@ -564,13 +563,8 @@ a:focus-visible {
   position: relative;
   overflow: hidden;
   z-index: 3;
-  max-width: 1660px;
+  max-width: 1440px;
   margin-inline: auto;
-}
-@media (max-width: 1450px) {
-  .about {
-    margin-inline: calc((100vw - 1450px) / 2);
-  }
 }
 @media (max-width: 1350px) {
   .about {
@@ -622,7 +616,6 @@ a:focus-visible {
 
 .about__col {
   background-color: rgba(255, 254, 235, 0.7);
-  padding: .5rem;
 }
 @media (max-width: 1350px) {
   .about__col {

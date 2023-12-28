@@ -551,10 +551,12 @@ a {
     position: relative;
     overflow: hidden;
     z-index: 3;
+    max-width: 1440px;
+    margin-inline: auto;
 
-    @media (max-width: 1450px) {
-        margin-inline: calc((100vw - 1450px) / 2);
-    }
+    // @media (max-width: 1450px) {
+    //     margin-inline: calc((100vw - 1450px) / 2);
+    // }
 
     @media (max-width: 1350px) {
         flex-direction: column;
