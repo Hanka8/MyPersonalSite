@@ -157,6 +157,28 @@ a:focus-visible {
   height: 2px;
 }
 
+/* Animations */
+@keyframes typing {
+  from {
+    width: 0;
+    border-right: 2px solid #000;
+  }
+  to {
+    width: 100%;
+  }
+  40% {
+    border-right: 2px solid #000;
+  }
+  100% {
+    border-right: none;
+  }
+}
+.animate-typing {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 2s steps(40) 1;
+}
+
 /* Navbar */
 .navbar {
   position: sticky;
