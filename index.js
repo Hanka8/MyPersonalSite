@@ -46,31 +46,6 @@
         }
     }
 
-    function aboutScrollChange() {
-        let aboutOffset = about.offsetTop - navbar.offsetHeight/2;
-        let scrollOffset = window.scrollY;
-        let projectsOffset = projects.offsetTop - navbar.offsetHeight/2;
-        const col1 = about.querySelector(".about__col.col-1");
-        const col3 = about.querySelector(".about__col.col-3");
-        const ilustration = about.querySelector(".about__image.col-2");
-
-        if (scrollOffset - aboutOffset > 100) {
-            col1.style.position = "relative";
-            col1.style.right = `${scrollOffset - aboutOffset -100}px`;
-            col1.style.top = `${(scrollOffset - aboutOffset - 100)*0.8}px`;
-            col3.style.position = "relative";
-            col3.style.left = `${scrollOffset - aboutOffset - 100}px`;
-            col3.style.top = `${(scrollOffset - aboutOffset - 100)*0.8}px`;
-            ilustration.style.position = "relative";
-            ilustration.style.opacity = `${30 - (scrollOffset - aboutOffset)*0.1}%`;
-            
-        }  else {
-            col1.style.position = "static";
-            col3.style.position = "static";
-            ilustration.style.opacity = "100%";
-        }
-    }
-
     function underlineMenuItem(item) {
         if (window.innerWidth > 800) {
             item.addEventListener('click', (e) => {
@@ -146,7 +121,6 @@
         navbarStickyOnSroll();
         if ((window.innerWidth > 920) && (window.innerHeight > 520)) { // dont run on mobile
             landingScrollChange();
-            aboutScrollChange();
         }
         setAboutOutline();
         if (window.screen.width > 800) { // dont run on mobile
@@ -161,11 +135,11 @@
         }
     });
 
-    document.addEventListener("resize", () => {
-        if ((window.innerWidth > 920) && (window.innerHeight > 520)) { // dont run on mobile
-            setSectionHeight(about);
-        }
-    });
+    // document.addEventListener("resize", () => {
+    //     if ((window.innerWidth > 920) && (window.innerHeight > 520)) { // dont run on mobile
+    //         setSectionHeight(about);
+    //     }
+    // });
 
     window.addEventListener('orientationchange', () => {
         if (window.innerWidth > 920 && window.innerHeight > 520) {

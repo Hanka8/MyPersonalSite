@@ -579,9 +579,8 @@ a:focus-visible {
   background-repeat: no-repeat;
   padding: 4rem;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 8vw;
   position: relative;
   overflow: hidden;
   z-index: 3;
@@ -638,9 +637,11 @@ a:focus-visible {
 
 .about__col {
   background-color: rgba(255, 254, 235, 0.7);
+  width: 35vw;
 }
 @media (max-width: 1350px) {
   .about__col {
+    width: 100%;
     max-width: 75vw;
   }
 }
@@ -714,7 +715,6 @@ a:focus-visible {
   display: block;
   background-size: cover;
   background-position: center;
-  background-repeat: repeat;
   width: 330px;
   max-width: 70vw;
   aspect-ratio: 1.5;
@@ -738,7 +738,15 @@ a:focus-visible {
 }
 
 .project4 {
+  background-image: url("../assets/images/desktop/4.png");
+}
+
+.project5 {
   background-image: url("../assets/images/desktop/5.png");
+}
+
+.project6 {
+  background-image: url("../assets/images/desktop/6.png");
 }
 
 .projects__text {

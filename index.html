@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/processed-style.css">
+    <link rel="stylesheet" href="./styles/style.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link
@@ -32,8 +32,11 @@
         <div class="landing__col1">
             <h1 class="landing__h1 h-1">Hana<br>Maruškevičová</h1>
             <h2 class="landing__h2 h-2 animate-typing">frontend developer</h2>
-            <p class="landing__p text align-left">Welcome to my page! I'm a self-taught frontend developer with a flair for design. I enjoy building interactive web apps and responsive websites. I have a creative side, and I love crafting visually appealing user interfaces and illustrations with tools like Figma,
-            Gimp and Inkscape. I am currently exploring the world of data and backend with MongoDB and Node.js. Feel free to reach out to me at <a class="link" href="https://www.linkedin.com/in/hana-maru%C5%A1kevi%C4%8Dov%C3%A1-11287127b/">LinkedIn</a> for professional networking.
+            <p class="landing__p text align-left">Welcome to my page! I'm a self-taught frontend developer with a flair for design. I specialize in building interactive
+            web apps and responsive websites using React. With a creative touch, I love crafting visually appealing
+            user interfaces and illustrations using tools like Figma, Gimp, and Inkscape. While I used to dabble in backend
+            technologies like MongoDB and Node.js, I've shifted my focus to mastering frontend development. Feel free to reach out
+            to me at <a class="link" href="https://www.linkedin.com/in/hana-maru%C5%A1kevi%C4%8Dov%C3%A1-11287127b/">LinkedIn</a> for professional networking.
                  </p>
         </div>
         <picture class="landing__col2">
@@ -47,22 +50,33 @@
 
     <div id="about" class="about">
         <h2 class="about__heading h-2">about me</h2>
-        <p class="about__col col-1 text align-center">I've been diving into web development for the past two years. I feel fairly confident with HTML, CSS and JavaScript. Currently, I'm
-        discovering backend architecture with Node.js - Express + MongoDB, and I plan to delve into frontend frameworks like React/Vue. I'm drawn to
-        frontend development simply because I enjoy solving the visual aspects of a project, and I'd like to explore design as
-        well. For now, I'm populating my <a class="link" href="https://github.com/Hanka8">GitHub</a> with various experiments.</p>
+        <p class="about__col col-1 text align-center">I began learning frontend development as a hobby after work, gradually gaining confidence in HTML, CSS, and JavaScript.
+        While dabbling in backend with Node.js and MongoDB, I found my passion lies in frontend, particularly with React. For now, I'm populating my <a class="link" href="https://github.com/Hanka8">GitHub</a> with various experiments.</p>
         <picture class="about__illustration">
             <img class="about__image col-2" src="assets/images/tablet/about-fs8.png" alt="">
         </picture>
-        <p class="about__col col-3 text align-center">By day, I navigate the labyrinth of government bureaucracy, armed with patience and soft skills. But when the workday
-        is over, I dive into the world of computers, a passion that's been with me since the days of Doom on my trusty old
-        Pentium. I find the virtual realm to be the ultimate canvas for human creativity and intelligence. Join me as I embark
-        on a journey to combine my skills and passion, aiming to carve out a career as a junior frontend developer.</p>
+        <p class="about__col col-3 text align-center">Although my government job provided me with valuable soft skills, patience, and discipline, I felt stifled by its
+        rigidity and lack of purpose. Now, I'm eager to transition into a role as a junior frontend developer, where I can
+        combine my passion for design and problem-solving with my newfound skills in React and frontend development.</p>
     </div>
 
     <section id="projects" class="projects">
         <h2 class="h-2">projects</h2>
         <div class="projects__container">
+            <div class="projects__col">
+                <a class="projects__repo" href="https://github.com/Hanka8/FM-rest-api-countries">&lt;code&gt;</a>
+                <a class="projects__project project4" href="https://where-countries.netlify.app/"></a>
+                <a class="projects__live text repo-description" href="https://where-countries.netlify.app/">REST API countries app.<span class="italics">frontend mentor challenge</span><br>
+                    <span class="tag">#React #TypeScript #REST-API</span>
+                </a>
+            </div>
+            <div class="projects__col">
+                <a class="projects__repo" href="https://github.com/Hanka8/Vlaskolaska">&lt;code&gt;</a>
+                <a class="projects__project project5" href="https://vlaskolaska.cz/"></a>
+                <a class="projects__live text repo-description" href="https://vlaskolaska.cz/">Website for a hair stylist.<br>
+                    <span class="tag">#React #MUI #React-router</span>
+                </a>
+            </div>
             <div class="projects__col">
                 <a class="projects__repo" href="https://github.com/Hanka8/Nu-pogodi">&lt;code&gt;</a>
                 <a class="projects__project project1" href="https://hanka8.github.io/Nu-pogodi/"></a>
@@ -73,7 +87,7 @@
             <div class="projects__col">
                 <a class="projects__repo" href="https://github.com/Maacaa0/31-hana-maca-final">&lt;code&gt;</a>
                 <a class="projects__project project2" href="https://maacaa0.github.io/31-hana-maca-final/"></a>
-                <a class="projects__live text repo-description" href="https://maacaa0.github.io/31-hana-maca-final/">Website of the 31. CBRN regiment. <span class="italics">beta version</span><br>
+                <a class="projects__live text repo-description" href="https://31pluk-liberec.cz/">Website of the 31. CBRN regiment.<br>
                     <span class="tag">#HTML #CSS #JavaScript</span>
                 </a>
             </div>
@@ -85,10 +99,10 @@
                 </a>
             </div>
             <div class="projects__col">
-                <a class="projects__repo" href="https://github.com/Hanka8/my-inventory">&lt;code&gt;</a>
-                <a class="projects__project project4" href="https://my-inventory-production.up.railway.app"></a>
-                <a class="projects__live text repo-description" href="https://my-inventory-production.up.railway.app">Food inventory app<br>
-                    <span class="tag">#Express.js #MongoDB #Bootstrap</span>
+                <a class="projects__repo" href="https://github.com/Hanka8/NelaMarus">&lt;code&gt;</a>
+                <a class="projects__project project6" href="https://hanka8.github.io/NelaMarus/"></a>
+                <a class="projects__live text repo-description" href="https://hanka8.github.io/NelaMarus/">Website for an artist.<br>
+                    <span class="tag">#HTML #CSS #JavaScript</span>
                 </a>
             </div>
         </div>
