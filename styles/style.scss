@@ -313,6 +313,7 @@ a {
             border-top-width: 4px;
             background-color: $color-background;
             transition: height 200ms ease, padding 200ms ease, gap 200ms ease, background-color 200ms ease;
+            border-right: none;
         
             .navbar__item {
                 display: block;
@@ -636,6 +637,7 @@ a {
     text-align: center;
     min-height: 100vh;
     margin-bottom: 5rem;
+    margin-top: 7rem;
 }
 
 .projects__container {

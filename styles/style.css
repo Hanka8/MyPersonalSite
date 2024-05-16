@@ -303,6 +303,7 @@ a:focus-visible {
     border-top-width: 4px;
     background-color: #fffeeb;
     transition: height 200ms ease, padding 200ms ease, gap 200ms ease, background-color 200ms ease;
+    border-right: none;
   }
   .menu-container.show .navbar__item {
     display: block;
@@ -652,6 +653,7 @@ a:focus-visible {
   text-align: center;
   min-height: 100vh;
   margin-bottom: 5rem;
+  margin-top: 7rem;
 }
 
 .projects__container {
