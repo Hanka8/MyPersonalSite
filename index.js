@@ -83,7 +83,7 @@
             // You're at the top of the page
         } else if (scrollTop < (scrollPositions.projects)) {
             navbar__item[0].classList.add("active"); // About
-        } else if (scrollTop < (scrollPositions.contact - 200)) {
+        } else if (scrollTop < (scrollPositions.contact - 300)) {
             navbar__item[1].classList.add("active"); // Projects
         } else {
             navbar__item[2].classList.add("active"); // Contact
@@ -130,19 +130,19 @@
 
     // set section height on load, resize and orientation change
     document.addEventListener("DOMContentLoaded", () => {
-        if ((window.innerWidth > 920) && (window.innerHeight > 520)) { // dont run on mobile
+        if (window.innerWidth > 1340) { 
             setSectionHeight(about);
         }
     });
 
-    // document.addEventListener("resize", () => {
-    //     if ((window.innerWidth > 920) && (window.innerHeight > 520)) { // dont run on mobile
-    //         setSectionHeight(about);
-    //     }
-    // });
+    document.addEventListener("resize", () => {
+        if (window.innerWidth > 1340) { 
+            setSectionHeight(about);
+        }
+    });
 
     window.addEventListener('orientationchange', () => {
-        if (window.innerWidth > 920 && window.innerHeight > 520) {
+        if (window.innerWidth > 1340) {
             setSectionHeight(about);
         }
     });
