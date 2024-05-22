@@ -518,6 +518,7 @@ a:focus-visible {
 @media (max-width: 920px) {
   .landing__p {
     padding-bottom: 30px;
+    padding-top: 30px;
   }
 }
 @media (max-width: 620px) {
@@ -632,7 +633,7 @@ a:focus-visible {
 
 .about__col {
   background-color: rgba(255, 254, 235, 0.7);
-  width: 35vw;
+  width: 550px;
 }
 @media (max-width: 1350px) {
   .about__col {
