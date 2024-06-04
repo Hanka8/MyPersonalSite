@@ -1,3 +1,41 @@
-<svg width="114" height="91" viewBox="0 0 114 91" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 11.3703C0 8.35473 1.19794 5.46264 3.33029 3.33029C5.46264 1.19794 8.35473 0 11.3703 0H102.333C105.349 0 108.241 1.19794 110.373 3.33029C112.505 5.46264 113.703 8.35473 113.703 11.3703V79.5923C113.703 82.6079 112.505 85.5 110.373 87.6323C108.241 89.7647 105.349 90.9626 102.333 90.9626H11.3703C8.35473 90.9626 5.46264 89.7647 3.33029 87.6323C1.19794 85.5 0 82.6079 0 79.5923V11.3703ZM20.0061 11.3703L56.8516 43.6109L93.6972 11.3703H20.0061ZM102.333 18.9259L60.5982 55.4474C59.5614 56.3557 58.23 56.8565 56.8516 56.8565C55.4733 56.8565 54.1418 56.3557 53.1051 55.4474L11.3703 18.9259V79.5923H102.333V18.9259Z" fill="#0D0D0D"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="114"
+   height="91"
+   viewBox="0 0 114 91"
+   fill="none"
+   version="1.1"
+   id="svg4"
+   sodipodi:docname="mail.svg"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs8" />
+  <sodipodi:namedview
+     id="namedview6"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="8.8351648"
+     inkscape:cx="26.994403"
+     inkscape:cy="45.556592"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4" />
+  <path
+     d="M0 11.3703C0 8.35473 1.19794 5.46264 3.33029 3.33029C5.46264 1.19794 8.35473 0 11.3703 0H102.333C105.349 0 108.241 1.19794 110.373 3.33029C112.505 5.46264 113.703 8.35473 113.703 11.3703V79.5923C113.703 82.6079 112.505 85.5 110.373 87.6323C108.241 89.7647 105.349 90.9626 102.333 90.9626H11.3703C8.35473 90.9626 5.46264 89.7647 3.33029 87.6323C1.19794 85.5 0 82.6079 0 79.5923V11.3703ZM20.0061 11.3703L56.8516 43.6109L93.6972 11.3703H20.0061ZM102.333 18.9259L60.5982 55.4474C59.5614 56.3557 58.23 56.8565 56.8516 56.8565C55.4733 56.8565 54.1418 56.3557 53.1051 55.4474L11.3703 18.9259V79.5923H102.333V18.9259Z"
+     fill="#0D0D0D"
+     id="path2"
+     style="fill:#fffeeb;fill-opacity:1" />
 </svg>
