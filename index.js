@@ -21,7 +21,7 @@
     };
 
     function setSectionHeight(section) {
-        section.style.height = window.innerHeight * 1.2 - navbar.offsetHeight + "px";
+        section.style.height = window.innerHeight * 1.2;
     }
 
     function setAboutOutline() {
