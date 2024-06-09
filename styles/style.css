@@ -69,11 +69,7 @@ a:focus-visible {
     font-size: 2rem;
   }
 }
-@media (max-width: 420px) {
-  .h-1 {
-    font-size: 1.5rem;
-  }
-}
+
 
 .h-2 {
   font-family: "Archivo Black", sans-serif;
@@ -85,11 +81,8 @@ a:focus-visible {
     font-size: 1.25rem;
   }
 }
-@media (max-width: 420px) {
-  .h-2 {
-    font-size: 1rem;
-  }
-}
+
+
 
 .text {
   font-size: 1rem;
@@ -189,7 +182,8 @@ a:focus-visible {
 
 /* Navbar */
 .navbar {
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
   display: flex;
   justify-content: space-between;
@@ -203,7 +197,7 @@ a:focus-visible {
   .navbar {
     max-width: -moz-fit-content;
     max-width: fit-content;
-    left: 100%;
+    right: 0;
     border: none;
     background: transparent;
     padding: 1.5rem;
@@ -399,26 +393,24 @@ a:focus-visible {
   justify-content: center;
   gap: 120px;
   align-items: center;
-  height: calc(100dvh - 76px);
+  height: calc(100dvh - 68px);
   max-width: 1440px;
   margin-inline: 4rem;
+  margin-top: 68px;
 }
 @media (min-width: 1000px) and (max-height: 630px), (max-height: 520px) {
   .landing {
-    height: -moz-fit-content;
-    height: fit-content;
     position: relative;
     margin-inline: 2rem;
-    top: -50px;
+    height: fit-content;
   }
 }
 @media (max-width: 920px) {
   .landing {
-    min-height: 100dvh;
+    height: fit-content;
     flex-direction: column;
     justify-content: flex-start;
     align-items: stretch;
-    margin-top: 0;
     margin-bottom: 40px;
     margin-inline: 24px;
     gap: 28px;
@@ -466,12 +458,13 @@ a:focus-visible {
 }
 @media (max-width: 1000px) and (max-height: 630px) {
   .landing__h1 {
-    margin-top: 1rem;
+    margin-top: 2rem;
     margin-bottom: 2.5rem;
   }
 }
 @media (max-width: 620px) {
   .landing__h1 {
+    margin-top: rem;
     border-top: 2px solid black;
     border-bottom: 2px solid black;
   }
@@ -563,6 +556,7 @@ a:focus-visible {
   z-index: 3;
   max-width: 1440px;
   margin-inline: auto;
+  min-height: 100vh;
 }
 @media (max-width: 1350px) {
   .about {
@@ -575,8 +569,9 @@ a:focus-visible {
 }
 @media (max-width: 700px) {
   .about {
-    padding: 3rem;
-    padding-top: 0;
+    padding: 0;
+    outline: none;
+    margin-inline: 24px;
   }
 }
 
@@ -595,6 +590,11 @@ a:focus-visible {
   .about__heading {
     position: static;
     transform: none;
+  }
+}
+@media screen and (max-width: 700px) {
+  .about__heading {
+    width: 100%;
   }
 }
 
@@ -650,6 +650,7 @@ a:focus-visible {
 @media (max-width: 1000px) {
   .projects__container {
     grid-template-columns: repeat(1, 1fr);
+    gap: 6rem;
   }
 }
 
