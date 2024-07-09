@@ -84,7 +84,7 @@ function underlineMenuItemOnScroll() {
     // You're at the top of the page
   } else if (scrollTop < scrollPositions.projects) {
     navbar__item[0].classList.add("active"); // About
-  } else if (scrollTop < scrollPositions.contact - 300) {
+  } else if (scrollTop < scrollPositions.contact - 500) {
     navbar__item[1].classList.add("active"); // Projects
   } else {
     navbar__item[2].classList.add("active"); // Contact
