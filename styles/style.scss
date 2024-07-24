@@ -12,6 +12,25 @@ $background-contact: #000;
     $padding-inline: 2rem;
 }
 
+// SCSS Mixins
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-column {
+    @include flex-center;
+    flex-direction: column;
+}
+
+@mixin flex-space-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
 /* webkit highligth color */
 input,
 textarea,
@@ -199,11 +218,9 @@ a {
 
 /* Navbar */
 .navbar {
+    @include flex-space-between;
     position: sticky;
     top: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding: .5rem $padding-inline;
     border-bottom: 2px solid $color-text-primary;
     background-color: $color-background;
@@ -407,12 +424,10 @@ a {
 
 /* Landing */
 .landing {
+    @include flex-center;
     position: fixed;
     z-index: 1;
-    display: flex;
-    justify-content: center;
     gap: 120px; 
-    align-items: center;
     height: calc(100dvh - 76px);
     max-width: 1440px;
     margin-inline: 4rem;
@@ -520,11 +535,9 @@ a {
     flex-basis: 19%;
 
     @media (max-width: 920px) {
+        @include flex-center;
         max-width: 320px;
-        align-self: center;
-        transform: translateX(-40%);
-        display: flex;
-        justify-content: center;
+        transform: translateX(40%);
     }
 
     @media (max-width: 520px) {
@@ -548,20 +561,20 @@ a {
 
 /* About */
 .about {
+    @include flex-space-between;
     background-color: $color-background;
     background-image: url("../assets/images/desktop/about-fs8.png");
     background-position: center;
     background-size: 50%;
     background-repeat: no-repeat;
-    padding: 4rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     position: relative;
     overflow: hidden;
     z-index: 3;
     max-width: 1440px;
     margin-inline: auto;
+    min-height: 100vh;
+    padding: 4rem;
+    padding-bottom: 70px;
 
     @media (max-width: 1350px) {
         flex-direction: column;
@@ -586,6 +599,7 @@ a {
     left: 50%;
     transform: translate(-50%);
     z-index: 0;
+    padding-top: 70px;
 
     @media (max-width:1350px) {
         position: static;
@@ -645,12 +659,9 @@ a {
 }
 
 .projects__col {
+    @include flex-column;
     justify-self: center;
     width: fit-content;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
     padding: 2rem;
     background-image: url("../assets/images/texture.png");
     background-repeat: no-repeat;
@@ -730,13 +741,11 @@ a {
 
 /* Contact */
 .contact {
+    @include flex-center;
     padding-top: 5rem;
     padding-bottom: 5rem;
     position: relative;
     z-index: 4;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background-color: $background-contact;
     border-top: 2px solid $color-text-primary;
 }
@@ -748,9 +757,7 @@ a {
 }
 
 .contact__container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    @include flex-column;
     align-items: flex-start;
 
     @media (max-width: 380px) {

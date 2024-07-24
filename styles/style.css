@@ -189,11 +189,11 @@ a:focus-visible {
 
 /* Navbar */
 .navbar {
-  position: sticky;
-  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: sticky;
+  top: 0;
   padding: 0.5rem 4rem;
   border-bottom: 2px solid #000;
   background-color: #fffeeb;
@@ -393,12 +393,12 @@ a:focus-visible {
 
 /* Landing */
 .landing {
-  position: fixed;
-  z-index: 1;
   display: flex;
   justify-content: center;
-  gap: 120px;
   align-items: center;
+  position: fixed;
+  z-index: 1;
+  gap: 120px;
   height: calc(100dvh - 76px);
   max-width: 1440px;
   margin-inline: 4rem;
@@ -521,11 +521,11 @@ a:focus-visible {
 }
 @media (max-width: 920px) {
   .landing__col2 {
-    max-width: 320px;
-    align-self: center;
-    transform: translateX(-40%);
     display: flex;
     justify-content: center;
+    align-items: center;
+    max-width: 320px;
+    transform: translateX(40%);
   }
 }
 @media (max-width: 520px) {
@@ -552,20 +552,22 @@ a:focus-visible {
 
 /* About */
 .about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: #fffeeb;
   background-image: url("../assets/images/desktop/about-fs8.png");
   background-position: center;
   background-size: 50%;
   background-repeat: no-repeat;
-  padding: 4rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   position: relative;
   overflow: hidden;
   z-index: 3;
   max-width: 1440px;
   margin-inline: auto;
+  min-height: 100vh;
+  padding: 4rem;
+  padding-bottom: 70px;
 }
 @media (max-width: 1350px) {
   .about {
@@ -593,6 +595,7 @@ a:focus-visible {
   left: 50%;
   transform: translate(-50%);
   z-index: 0;
+  padding-top: 70px;
 }
 @media (max-width: 1350px) {
   .about__heading {
@@ -657,13 +660,13 @@ a:focus-visible {
 }
 
 .projects__col {
-  justify-self: center;
-  width: -moz-fit-content;
-  width: fit-content;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  justify-self: center;
+  width: -moz-fit-content;
+  width: fit-content;
   padding: 2rem;
   background-image: url("../assets/images/texture.png");
   background-repeat: no-repeat;
@@ -742,13 +745,13 @@ a:focus-visible {
 
 /* Contact */
 .contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding-top: 5rem;
   padding-bottom: 5rem;
   position: relative;
   z-index: 4;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background-color: #000;
   border-top: 2px solid #000;
 }
@@ -761,8 +764,9 @@ a:focus-visible {
 
 .contact__container {
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
   align-items: flex-start;
 }
 @media (max-width: 380px) {
