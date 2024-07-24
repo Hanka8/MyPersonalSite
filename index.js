@@ -86,6 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.addEventListener("scroll", landingScrollChange);
   }
 
+  // underline menu item on scroll on desktop
   if (window.innerWidth > 800) {
     document.addEventListener("scroll", underlineMenuItemOnScroll);
   }
