@@ -248,6 +248,12 @@ a:focus-visible {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transform: rotate(180deg);
+    transition: 200ms ease-in-out;
+  }
+  .navbar__menubtn.close {
+    transform: rotate(0deg);
+    transition: 0ms;
   }
   .navbar__menubtn.close .line-one {
     transform: rotate(45deg);

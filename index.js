@@ -19,14 +19,11 @@ document.addEventListener("DOMContentLoaded", () => {
   //    - changes the opacity of the columns from 0% to 100% as the user scrolls down
   function landingScrollChange() {
     if (window.scrollY > 20) {
-      let rgb1 =
-        255 - window.scrollY / 20 < 234 ? 227 : 255 - window.scrollY / 20;
-      let rgb2 =
-        254 - window.scrollY / 20 < 233 ? 226 : 254 - window.scrollY / 20;
-      let rgb3 =
-        235 - window.scrollY / 20 < 214 ? 207 : 235 - window.scrollY / 20;
+      let rgb1 = Math.max(227, 255 - window.scrollY / 20);
+      let rgb2 = Math.max(226, 254 - window.scrollY / 20);
+      let rgb3 = Math.max(207, 235 - window.scrollY / 20);
       scrollFilling.style.backgroundColor = `rgb(${rgb1}, ${rgb2}, ${rgb3})`;
-      let percent = window.scrollY > 810 ? 100 : (window.scrollY / 810) * 100;
+      let percent = Math.min(100, (window.scrollY / 810) * 100);
       document.querySelector(".landing__col1").style.opacity = `${
         100 - percent
       }%`;
@@ -43,18 +40,20 @@ document.addEventListener("DOMContentLoaded", () => {
   function underlineMenuItemOnScroll() {
     const scrollTop = scrollContainer().scrollTop;
     const windowHeight = window.innerHeight;
+    const offsetAbout = windowHeight / 2;
+    const offsetProjects = 200; 
+    const offsetContact = 600; 
     menuItems.forEach((li) => li.classList.remove("active"));
-    if (scrollTop < scrollPositions.about - windowHeight / 2) {
-      // You're at the top of the page
+    if (scrollTop < scrollPositions.about - offsetAbout) {
       return;
-    } else if (scrollTop < scrollPositions.projects - 200) {
+    } else if (scrollTop < scrollPositions.projects - offsetProjects) {
       menuItems[0].classList.add("active"); // About
-    } else if (scrollTop < scrollPositions.contact - 600) {
+    } else if (scrollTop < scrollPositions.contact - offsetContact) {
       menuItems[1].classList.add("active"); // Projects
     } else {
       menuItems[2].classList.add("active"); // Contact
     }
-    console.log(scrollTop, scrollPositions.contact);
+    console.log(scrollTop, scrollPositions.about);
   }
 
   // function to perform 3 side effects:
@@ -63,13 +62,6 @@ document.addEventListener("DOMContentLoaded", () => {
   function animateHamburgerButton() {
     hamburgerBtn.classList.toggle("close");
     menuContainer.classList.toggle("show");
-    if (hamburgerBtn.classList.contains("close")) {
-      hamburgerBtn.style.transform = "rotate(0deg)";
-      hamburgerBtn.style.transition = "transform 0s";
-    } else {
-      hamburgerBtn.style.transform = "rotate(180deg)";
-      hamburgerBtn.style.transition = "transform 200ms ease-in-out";
-    }
   }
 
   function scrollToTop() {
@@ -81,22 +73,28 @@ document.addEventListener("DOMContentLoaded", () => {
   hamburgerBtn.addEventListener("click", animateHamburgerButton);
   topAnchor.addEventListener("click", scrollToTop);
 
-  // dont run the scroll functions if the window is too small
-  if (window.innerWidth > 920 && window.innerHeight > 520) {
-    document.addEventListener("scroll", landingScrollChange);
-  }
+  // Handle scroll effects based on screen size
+  const handleScroll = () => {
+    if (window.innerWidth > 920) {
+      landingScrollChange();
+      underlineMenuItemOnScroll();
+    }
+  };
 
-  // underline menu item on scroll on desktop
-  if (window.innerWidth > 800) {
-    document.addEventListener("scroll", underlineMenuItemOnScroll);
-  }
+  document.addEventListener("scroll", handleScroll);
 
-  // simulate clicking close button when a menu item is clicked on mobile
-  if (window.innerWidth < 800) {
-    menuItems.forEach((item) => {
-      item.addEventListener("click", () => {
-        hamburgerBtn.click();
+  // Handle resize and orientation changes
+  const handleResize = () => {
+    if (window.innerWidth < 800) {
+      menuItems.forEach((item) => {
+        item.addEventListener("click", () => hamburgerBtn.click());
       });
-    });
-  }
+    }
+  };
+
+  window.addEventListener("resize", handleResize);
+  window.addEventListener("orientationchange", handleResize);
+
+  // Initial setup
+  handleResize();
 });

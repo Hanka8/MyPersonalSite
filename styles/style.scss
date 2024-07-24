@@ -270,8 +270,13 @@ a {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        transform: rotate(180deg);
+        transition: 200ms ease-in-out;
 
         &.close {
+            transform: rotate(0deg);
+            transition: 0ms;
+
             .line-one {
                 transform: rotate(45deg);
                 transform-origin: 1px;
