@@ -406,7 +406,6 @@ a:focus-visible {
   z-index: 1;
   gap: 120px;
   height: calc(100dvh - 4.75rem);
-  max-width: 1440px;
   margin-inline: 4rem;
 }
 @media (min-width: 62.5em) and (max-height: 39.375em), (max-height: 32.5em) {
