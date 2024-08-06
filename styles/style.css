@@ -561,7 +561,7 @@ a:focus-visible {
   justify-content: space-between;
   align-items: center;
   background-color: #fffeeb;
-  background-image: url("../assets/images/desktop/about-fs8.png");
+  background-image: url("../assets/images/desktop/about-fs8.webp");
   background-position: center;
   background-size: 50%;
   background-repeat: no-repeat;
@@ -673,7 +673,7 @@ a:focus-visible {
   width: -moz-fit-content;
   width: fit-content;
   padding: 2rem;
-  background-image: url("../assets/images/texture.png");
+  background-image: url("../assets/images/texture.webp");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -716,27 +716,27 @@ a:focus-visible {
 }
 
 .project1 {
-  background-image: url("../assets/images/desktop/1.png");
+  background-image: url("../assets/images/desktop/1.webp");
 }
 
 .project2 {
-  background-image: url("../assets/images/desktop/2.png");
+  background-image: url("../assets/images/desktop/2.webp");
 }
 
 .project3 {
-  background-image: url("../assets/images/desktop/3.png");
+  background-image: url("../assets/images/desktop/3.webp");
 }
 
 .project4 {
-  background-image: url("../assets/images/desktop/4.png");
+  background-image: url("../assets/images/desktop/4.webp");
 }
 
 .project5 {
-  background-image: url("../assets/images/desktop/5.png");
+  background-image: url("../assets/images/desktop/5.webp");
 }
 
 .project6 {
-  background-image: url("../assets/images/desktop/6.png");
+  background-image: url("../assets/images/desktop/6.webp");
 }
 
 .projects__text {
