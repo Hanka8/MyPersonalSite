@@ -1,127 +1,293 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Hana Maruškevičová is a self-taught frontend developer specializing in React and TypeScript. Explore her portfolio showcasing various projects and find out how to get in touch for opportunities in web development.">
-    <link rel="stylesheet" href="./styles/processed-style.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link
-    href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Fira+Code&family=Montserrat&family=Space+Mono:wght@400;700&display=swap"
-    rel="stylesheet">
-<link rel="apple-touch-icon" sizes="180x180" href="./assets/favicons/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="./assets/favicons/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="./assets/favicons/favicon-16x16.png">
-<link rel="manifest" href="./assets/favicons/site.webmanifest">
-<title>HM</title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Hana Maruškevičová is a self-taught frontend developer specializing in React and TypeScript. Explore her portfolio showcasing various projects and find out how to get in touch for opportunities in web development."
+    />
+    <meta
+      property="og:title"
+      content="Hana Maruškevičová - Frontend Developer"
+    />
+    <meta
+      property="og:description"
+      content="Explore Hana Maruškevičová's portfolio and projects in frontend development."
+    />
+    <meta property="og:url" content="https://hanamarus.cz" />
+    <meta
+      property="og:image"
+      content="https://hanamarus.cz/assets/images/thumbnail.jpg"
+    />
+    <meta property="og:type" content="website" />
 
-<body>
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Hana Maruškevičová - Frontend Developer"
+    />
+    <meta
+      name="twitter:description"
+      content="Explore Hana Maruškevičová's portfolio and projects in frontend development."
+    />
+    <meta
+      name="twitter:image"
+      content="https://hanamarus.cz/assets/images/thumbnail.jpg"
+    />
+    <link rel="stylesheet" href="./styles/processed-style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Fira+Code&family=Montserrat&family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/favicons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./assets/favicons/site.webmanifest" />
+    <title>Hana Maruškevičová - Frontend developer</title>
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Hana Maruškevičová",
+        "jobTitle": "junior frontend developer",
+        "url": "https://hanamarus.cz",
+        "sameAs": [
+          "https://www.linkedin.com/in/hana-maruskevicova/",
+          "https://github.com/Hanka8"
+        ],
+        "knowsAbout": [
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "React",
+          "TypeScript",
+          "Git"
+        ],
+        "description": "Hana Maruškevičová is a self-taught junior frontend developer with a passion for creating interactive and visually appealing web applications using React and TypeScript. Seeking job opportunities to grow and contribute to dynamic teams."
+      }
+    </script>
+  </head>
+
+  <body>
     <nav class="navbar">
-        <a class="navbar__logo" href="#landing" id="topAnchor">HM</a>  
-        <button class="navbar__menubtn" id="hamburgerBtn" aria-label="menu button">
-            <span class="navbar__line line-one"></span>
-            <span class="navbar__line line-two"></span>
-            <span class="navbar__line line-three"></span>
-        </button>
-        <menu class="navbar__container menu-container">
-            <li><a class="navbar__item" href="#about">about me</a></li>
-            <li><a class="navbar__item" href="#projects">projects</a></li>
-            <li><a class="navbar__item" href="#contact">contact</a></li>
-        </menu>
+      <a class="navbar__logo" href="#landing" id="topAnchor">HM</a>
+      <button
+        class="navbar__menubtn"
+        id="hamburgerBtn"
+        aria-label="menu button"
+      >
+        <span class="navbar__line line-one"></span>
+        <span class="navbar__line line-two"></span>
+        <span class="navbar__line line-three"></span>
+      </button>
+      <menu class="navbar__container menu-container">
+        <li><a class="navbar__item" href="#about">about me</a></li>
+        <li><a class="navbar__item" href="#projects">projects</a></li>
+        <li><a class="navbar__item" href="#contact">contact</a></li>
+      </menu>
     </nav>
 
-    <section id="landing" class="landing" >
-        <div class="landing__col1">
-            <h1 class="landing__h1 h-1">Hana<br>Maruškevičová</h1>
-            <h2 class="landing__h2 h-2 animate-typing">frontend developer</h2>
-            <p class="landing__p text align-left">Welcome to my page! I'm a self-taught frontend developer focusing od React and TypeScript. I'm looking for a junior position in a company where I can grow and learn.
-                 </p>
-        </div>
-        <picture class="landing__col2">
-            <source media="(max-width: 920px)" srcset="assets/images/tablet/me-row.webp">
-            <img class="landing__img" src="assets/images/desktop/me-fs8.webp" alt="me">
-        </picture>   
+    <section id="landing" class="landing">
+      <div class="landing__col1">
+        <h1 class="landing__h1 h-1">Hana<br />Maruškevičová</h1>
+        <h2 class="landing__h2 h-2 animate-typing">frontend developer</h2>
+        <p class="landing__p text align-left">
+          Welcome to my page! I'm a self-taught frontend developer focusing od
+          React and TypeScript. I'm looking for a junior position in a company
+          where I can grow and learn.
+        </p>
+      </div>
+      <picture class="landing__col2">
+        <source
+          media="(max-width: 920px)"
+          srcset="assets/images/tablet/me-row.webp"
+        />
+        <img
+          class="landing__img"
+          src="assets/images/desktop/me-fs8.webp"
+          alt="me"
+        />
+      </picture>
     </section>
 
     <div class="scroll-filling"></div>
 
     <div id="about" class="about">
-        <h2 class="about__heading h-2">about me</h2>
-        <p class="about__col col-1 text">I began learning web development as a hobby after work, gaining confidence in HTML, CSS, and JavaScript.
-        While dabbling in backend with Node.js, I found my passion lies in frontend, because I like to interact with visual site of the project. For now, I'm diving into React using TypeScript.</p>
-        <picture class="about__illustration">
-            <img class="about__image col-2" src="assets/images/tablet/about-fs8.webp" alt="">
-        </picture>
-        <p class="about__col col-3 text">Although my government job provided me with valuable soft skills and patience, I felt stifled by its
-        rigidity and lack of purpose. Now, I'm eager to transition into a role as a junior frontend developer, where I can
-        combine my passion for design and problem-solving with my newfound skills in frontend development.</p>
+      <h2 class="about__heading h-2">about me</h2>
+      <p class="about__col col-1 text">
+        I began learning web development as a hobby after work, gaining
+        confidence in HTML, CSS, and JavaScript. While dabbling in backend with
+        Node.js, I found my passion lies in frontend, because I like to interact
+        with visual site of the project. For now, I'm diving into React using
+        TypeScript.
+      </p>
+      <picture class="about__illustration">
+        <img
+          class="about__image col-2"
+          src="assets/images/tablet/about-fs8.webp"
+          alt=""
+        />
+      </picture>
+      <p class="about__col col-3 text">
+        Although my government job provided me with valuable soft skills and
+        patience, I felt stifled by its rigidity and lack of purpose. Now, I'm
+        eager to transition into a role as a junior frontend developer, where I
+        can combine my passion for design and problem-solving with my newfound
+        skills in frontend development.
+      </p>
     </div>
 
-    <hr class="horizontal-rule">
+    <hr class="horizontal-rule" />
 
     <section id="projects" class="projects">
-        <h2 class="h-2">projects</h2>
-        <div class="projects__container">
-            <div class="projects__col">
-                <a class="projects__repo" href="https://github.com/Hanka8/FM-product-feedback" aria-label="product feedback project repository">&lt;code&gt;</a>
-                <a class="projects__project project1" href="https://fm-feedback.netlify.app/" aria-label="product feedback project live site"></a>
-                <a class="projects__live text repo-description" href="https://fm-feedback.netlify.app/" aria-label="product feedback project live site">
-                    <p class="title">Feedback dashboard</p>
-                    <span class="tag">#React #TypeScript #Firebase #CRUD</span>
-                </a>
-            </div>
-            <div class="projects__col">
-                <a class="projects__repo" href="https://github.com/Hanka8/FM-rest-api-countries" aria-label="rest API countries project repository">&lt;code&gt;</a>
-                <a class="projects__project project2" href="https://where-countries.netlify.app/" aria-label="rest API countries project live site"></a>
-                <a class="projects__live text repo-description" href="https://where-countries.netlify.app/" aria-label="rest API countries project live site">
-                    <p class="title">Countries info app</p>
-                    <span class="tag">#React #TypeScript #REST-API #React-router</span>
-                </a>
-            </div>
-            <div class="projects__col">
-                <a class="projects__repo" href="https://github.com/Hanka8/Vlaskolaska" aria-label="vlaskolaska project repository">&lt;code&gt;</a>
-                <a class="projects__project project3" href="https://vlaskolaska.cz/" aria-label="vlaskolaska project live site"></a>
-                <a class="projects__live text repo-description" href="https://vlaskolaska.cz/" aria-label="vlaskolaska project live site">
-                    <p class="title">Hairstylist website</p>
-                    <span class="tag">#React #MUI #React-router</span>
-                </a>
-            </div>
-            <div class="projects__col">
-                <a class="projects__repo" href="https://github.com/Hanka8/Nu-pogodi" aria-label="nu pogodi project repository">&lt;code&gt;</a>
-                <a class="projects__project project4" href="https://hanka8.github.io/Nu-pogodi/" aria-label="nu pogodi project live site"></a>
-                <a class="projects__live text repo-description" href="https://hanka8.github.io/Nu-pogodi/" aria-label="nu pogodi project live site">
-                    <p class="title">Minigame</p>
-                    <span class="tag">#HTML #CSS #JavaScript</span>
-                </a>
-            </div>
+      <h2 class="h-2">projects</h2>
+      <div class="projects__container">
+        <div class="projects__col">
+          <a
+            class="projects__repo"
+            href="https://github.com/Hanka8/FM-product-feedback"
+            aria-label="product feedback project repository"
+            >&lt;code&gt;</a
+          >
+          <a
+            class="projects__project project1"
+            href="https://fm-feedback.netlify.app/"
+            aria-label="product feedback project live site"
+          ></a>
+          <a
+            class="projects__live text repo-description"
+            href="https://fm-feedback.netlify.app/"
+            aria-label="product feedback project live site"
+          >
+            <p class="title">Feedback dashboard</p>
+            <span class="tag">#React #TypeScript #Firebase #CRUD</span>
+          </a>
         </div>
-        <p class="align-center text">check out my <a class="link" href="https://github.com/Hanka8">GitHub</a> for more...</p>
+        <div class="projects__col">
+          <a
+            class="projects__repo"
+            href="https://github.com/Hanka8/FM-rest-api-countries"
+            aria-label="rest API countries project repository"
+            >&lt;code&gt;</a
+          >
+          <a
+            class="projects__project project2"
+            href="https://where-countries.netlify.app/"
+            aria-label="rest API countries project live site"
+          ></a>
+          <a
+            class="projects__live text repo-description"
+            href="https://where-countries.netlify.app/"
+            aria-label="rest API countries project live site"
+          >
+            <p class="title">Countries info app</p>
+            <span class="tag">#React #TypeScript #REST-API #React-router</span>
+          </a>
+        </div>
+        <div class="projects__col">
+          <a
+            class="projects__repo"
+            href="https://github.com/Hanka8/Vlaskolaska"
+            aria-label="vlaskolaska project repository"
+            >&lt;code&gt;</a
+          >
+          <a
+            class="projects__project project3"
+            href="https://vlaskolaska.cz/"
+            aria-label="vlaskolaska project live site"
+          ></a>
+          <a
+            class="projects__live text repo-description"
+            href="https://vlaskolaska.cz/"
+            aria-label="vlaskolaska project live site"
+          >
+            <p class="title">Hairstylist website</p>
+            <span class="tag">#React #MUI #React-router</span>
+          </a>
+        </div>
+        <div class="projects__col">
+          <a
+            class="projects__repo"
+            href="https://github.com/Hanka8/Nu-pogodi"
+            aria-label="nu pogodi project repository"
+            >&lt;code&gt;</a
+          >
+          <a
+            class="projects__project project4"
+            href="https://hanka8.github.io/Nu-pogodi/"
+            aria-label="nu pogodi project live site"
+          ></a>
+          <a
+            class="projects__live text repo-description"
+            href="https://hanka8.github.io/Nu-pogodi/"
+            aria-label="nu pogodi project live site"
+          >
+            <p class="title">Minigame</p>
+            <span class="tag">#HTML #CSS #JavaScript</span>
+          </a>
+        </div>
+      </div>
+      <p class="align-center text">
+        check out my
+        <a class="link" href="https://github.com/Hanka8">GitHub</a> for more...
+      </p>
     </section>
 
     <footer id="contact" class="contact">
-        <div class="contact__container">
-            <a class="contact__anchor" href="mailto:hanka.maruskevicova@gmail.com">
-                <div class="container__col text">
-                    <img class="contact__icon" src="assets/logos/mail.svg" alt="mail icon">
-                    <p class="contact__link link">hanka.maruskevicova@gmail.com</p>
-                </div>
-            </a>
-            <a class="contact__anchor" href="tel:+420728428934">
-                <div class="container__col text">
-                    <img class="contact__icon" src="assets/logos/phone.svg" alt="phone icon">
-                    <p class="contact__link link">+420 728 428 934</p>
-                </div>
-            </a>
-            <a class="contact__anchor" href="https://www.linkedin.com/in/hana-maruskevicova/">
-                <div class="container__col text">
-                    <img class="contact__icon" src="assets/logos/linkedin.svg" alt="linkedin icon">
-                    <p class="contact__link link">Hana Maruškevičová</p>
-                </div>
-            </a>
-        </div>
+      <div class="contact__container">
+        <a class="contact__anchor" href="mailto:hanka.maruskevicova@gmail.com">
+          <div class="container__col text">
+            <img
+              class="contact__icon"
+              src="assets/logos/mail.svg"
+              alt="mail icon"
+            />
+            <p class="contact__link link">hanka.maruskevicova@gmail.com</p>
+          </div>
+        </a>
+        <a class="contact__anchor" href="tel:+420728428934">
+          <div class="container__col text">
+            <img
+              class="contact__icon"
+              src="assets/logos/phone.svg"
+              alt="phone icon"
+            />
+            <p class="contact__link link">+420 728 428 934</p>
+          </div>
+        </a>
+        <a
+          class="contact__anchor"
+          href="https://www.linkedin.com/in/hana-maruskevicova/"
+        >
+          <div class="container__col text">
+            <img
+              class="contact__icon"
+              src="assets/logos/linkedin.svg"
+              alt="linkedin icon"
+            />
+            <p class="contact__link link">Hana Maruškevičová</p>
+          </div>
+        </a>
+      </div>
     </footer>
-<script src="index.js"></script>
-</body>
+    <script src="index.js"></script>
+  </body>
 </html>
